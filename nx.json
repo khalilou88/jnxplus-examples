@@ -27,5 +27,13 @@
       "default"
     ],
     "sharedGlobals": []
-  }
+  },
+  "plugins": [
+    {
+      "plugin": "@jnxplus/nx-maven",
+      "options": {
+        "mavenRootDirectory": "nx-maven"
+      }
+    }
+  ]
 }
