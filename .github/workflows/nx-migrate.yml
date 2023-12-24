@@ -1,0 +1,109 @@
+name: Nx migrate
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 1 * * *'
+
+jobs:
+  nx-migrate:
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node_version: ['20']
+        java: ['17']
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node_version }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm i
+
+      - name: Check if @nx/workspace is outdated
+        id: nx-workspace-outdated
+        run: |
+          IS_OUTDATED=$(test ! -z "$(npm outdated @nx/workspace)" && echo true || echo false)
+          echo $IS_OUTDATED
+          echo "outdated=$IS_OUTDATED" >> $GITHUB_OUTPUT
+
+      - name: Update @nx/workspace
+        if: steps.nx-workspace-outdated.outputs.outdated == 'true'
+        run: npx nx migrate latest
+
+      - name: Install dependencies
+        if: steps.nx-workspace-outdated.outputs.outdated == 'true'
+        run: npm i
+
+      - name: Check if has migrations
+        if: steps.nx-workspace-outdated.outputs.outdated == 'true'
+        id: nx-workspace-has-migrations
+        run: |
+          HAS_MIGRATIONS=$(test -f migrations.json && echo true || echo false)
+          echo $HAS_MIGRATIONS
+          echo "has_migrations=$HAS_MIGRATIONS" >> $GITHUB_OUTPUT
+
+      - name: Run @nx/workspace migrations
+        if: steps.nx-workspace-has-migrations.outputs.has_migrations == 'true'
+        run: npx nx migrate --run-migrations
+
+      - name: Setup Git
+        if: steps.nx-workspace-outdated.outputs.outdated == 'true'
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+
+      - name: Commit changes
+        if: steps.nx-workspace-outdated.outputs.outdated == 'true'
+        run: |
+          LAST_VERSION=$(npm view @nx/workspace version)
+          git add .
+          [[ $(git status --porcelain) ]] && git commit -m "build: update nx to version ${LAST_VERSION}" || echo "nothing to commit"
+
+      - name: Remove migrations.json & commit
+        if: steps.nx-workspace-has-migrations.outputs.has_migrations == 'true'
+        run: |
+          git rm -f migrations.json
+          git commit -m "build: remove migrations.json"
+
+      - name: Setup Java
+        if: steps.nx-workspace-outdated.outputs.outdated == 'true'
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: ${{ matrix.java }}
+
+      - name: Tests
+        id: tests
+        if: steps.nx-workspace-outdated.outputs.outdated == 'true'
+        continue-on-error: true
+        run: npm run nx run-many -- --target=test
+        env:
+          NX_VERBOSE_LOGGING: 'true'
+          GITHUB_ACTIONS: 'true'
+
+      - name: Push changes
+        if: steps.nx-workspace-outdated.outputs.outdated == 'true' && steps.tests.outcome == 'success'
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+
+      - name: Create PR
+        if: steps.nx-workspace-outdated.outputs.outdated == 'true' && steps.tests.outcome != 'success'
+        run: |
+          LAST_VERSION=$(npm view @nx/workspace version)
+          BRANCH="update-nx-${LAST_VERSION}-${{ github.run_id }}-${{ github.run_attempt }}"
+          git checkout -b ${BRANCH}
+          git push -f --set-upstream origin ${BRANCH}
+          gh pr view ${BRANCH} || gh pr create -t "build: update nx to version ${LAST_VERSION}" -b "Update nx to version ${LAST_VERSION}."
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
