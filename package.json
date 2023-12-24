@@ -6,7 +6,7 @@
   "private": true,
   "devDependencies": {
     "@jnxplus/nx-gradle": "^0.17.12",
-    "@jnxplus/nx-maven": "^0.20.2",
+    "@jnxplus/nx-maven": "^0.20.3",
     "@nx/js": "17.2.7",
     "@nx/workspace": "17.2.7",
     "@prettier/plugin-xml": "^3.2.2",

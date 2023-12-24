@@ -4,16 +4,24 @@
   "projectType": "library",
   "sourceRoot": "./nx-maven/maven-lib/src",
   "targets": {
-    "install": {
+    "build": {
       "executor": "@jnxplus/nx-maven:run-task",
-      "outputs": ["{projectRoot}/target", "{options.outputDirLocalRepo}"],
+      "outputs": [
+        "{projectRoot}/target",
+        "{projectRoot}/.flattened-pom.xml",
+        "{options.outputDirLocalRepo}"
+      ],
       "options": {
         "task": "install -DskipTests=true"
       }
     },
-    "build": {
+    "build-test": {
       "executor": "@jnxplus/nx-maven:run-task",
-      "outputs": ["{projectRoot}/target", "{options.outputDirLocalRepo}"],
+      "outputs": [
+        "{projectRoot}/target",
+        "{projectRoot}/.flattened-pom.xml",
+        "{options.outputDirLocalRepo}"
+      ],
       "options": {
         "task": "install -DskipTests=true"
       }
