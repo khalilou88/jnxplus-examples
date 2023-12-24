@@ -15,7 +15,7 @@
         "task": "install -DskipTests=true"
       }
     },
-    "build-test": {
+    "target-with-outputDirLocalRepo": {
       "executor": "@jnxplus/nx-maven:run-task",
       "outputs": [
         "{projectRoot}/target",
