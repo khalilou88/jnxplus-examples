@@ -17,7 +17,7 @@ jobs:
   Run_checks:
     strategy:
       matrix:
-        os: [ubuntu-latest]
+        os: [ubuntu-latest, macOS-latest, windows-latest]
         node_version: ['20']
         java: ['17']
       fail-fast: true
