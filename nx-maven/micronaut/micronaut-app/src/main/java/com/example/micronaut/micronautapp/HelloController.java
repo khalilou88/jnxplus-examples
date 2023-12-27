@@ -1,16 +1,20 @@
 package com.example.micronaut.micronautapp;
 
+import com.example.micronaut.micronautlib.HelloService;
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Produces;
+import jakarta.inject.Inject;
 
 @Controller("/hello")
 public class HelloController {
 
+  @Inject
+  private HelloService helloService;
   @Get
   @Produces(MediaType.TEXT_PLAIN)
   public String index() {
-    return "Hello World";
+    return helloService.greeting();
   }
 }

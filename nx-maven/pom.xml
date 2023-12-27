@@ -54,5 +54,6 @@
     <module>spring-boot/maven-lib</module>
     <module>micronaut/micronaut-parent-project</module>
     <module>micronaut/micronaut-app</module>
+    <module>micronaut/micronaut-lib</module>
   </modules>
 </project>
