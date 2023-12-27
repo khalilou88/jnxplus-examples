@@ -1,0 +1,18 @@
+{
+  "name": "micronaut-parent-project",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@jnxplus/nx-maven:run-task",
+      "outputs": [
+        "{options.outputDirLocalRepo}",
+        "{projectRoot}/.flattened-pom.xml"
+      ],
+      "options": {
+        "task": "install"
+      }
+    }
+  },
+  "tags": []
+}

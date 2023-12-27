@@ -15,8 +15,8 @@
     <java.version>17</java.version>
     <kotlin.version>1.9.20</kotlin.version>
     <spring.boot.version>3.2.0</spring.boot.version>
+    <micronaut.version>4.2.0</micronaut.version>
   </properties>
-
 
   <build>
     <plugins>
@@ -52,5 +52,7 @@
     <module>spring-boot/maven-parent-project</module>
     <module>spring-boot/maven-app</module>
     <module>spring-boot/maven-lib</module>
+    <module>micronaut/micronaut-parent-project</module>
+    <module>micronaut/micronaut-app</module>
   </modules>
 </project>
