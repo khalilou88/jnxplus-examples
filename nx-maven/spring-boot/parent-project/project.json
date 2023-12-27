@@ -1,5 +1,5 @@
 {
-  "name": "maven-parent-project",
+  "name": "spring-boot-parent-project",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "targets": {

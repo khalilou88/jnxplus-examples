@@ -49,9 +49,9 @@
   </build>
 
   <modules>
-    <module>spring-boot/maven-parent-project</module>
-    <module>spring-boot/maven-app</module>
-    <module>spring-boot/maven-lib</module>
+    <module>spring-boot/parent-project</module>
+    <module>spring-boot/app</module>
+    <module>spring-boot/lib</module>
     <module>micronaut/micronaut-parent-project</module>
     <module>micronaut/micronaut-app</module>
     <module>micronaut/micronaut-lib</module>
