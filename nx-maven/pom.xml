@@ -16,6 +16,7 @@
     <kotlin.version>1.9.20</kotlin.version>
     <spring.boot.version>3.2.0</spring.boot.version>
     <micronaut.version>4.2.0</micronaut.version>
+    <quarkus.version>3.5.3</quarkus.version>
   </properties>
 
   <build>
@@ -55,5 +56,8 @@
     <module>micronaut/micronaut-parent-project</module>
     <module>micronaut/micronaut-app</module>
     <module>micronaut/micronaut-lib</module>
+    <module>quarkus/quarkus-parent-project</module>
+    <module>quarkus/quarkus-app</module>
+    <module>quarkus/quarkus-lib</module>
   </modules>
 </project>
