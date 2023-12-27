@@ -3,7 +3,7 @@
 #
 # Before building the container image run:
 #
-# nx build quarkus-app --mvnBuildCommand="package"
+# nx build quarkus-app --task="package"
 #
 # Then, build the image with:
 #
