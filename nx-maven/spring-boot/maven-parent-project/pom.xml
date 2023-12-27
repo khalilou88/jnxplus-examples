@@ -14,7 +14,7 @@
     <groupId>com.example</groupId>
     <artifactId>root-parent-project</artifactId>
     <version>${revision}</version>
-    <relativePath>../pom.xml</relativePath>
+    <relativePath>../../pom.xml</relativePath>
   </parent>
 
   <properties>
