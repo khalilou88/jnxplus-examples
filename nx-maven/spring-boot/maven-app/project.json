@@ -1,8 +1,8 @@
 {
   "name": "maven-app",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "./nx-maven/maven-app/src",
+  "sourceRoot": "./nx-maven/spring-boot/maven-app/src",
   "targets": {
     "build": {
       "executor": "@jnxplus/nx-maven:run-task",

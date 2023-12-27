@@ -1,8 +1,8 @@
 {
   "name": "maven-lib",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "sourceRoot": "./nx-maven/maven-lib/src",
+  "sourceRoot": "./nx-maven/spring-boot/maven-lib/src",
   "targets": {
     "build": {
       "executor": "@jnxplus/nx-maven:run-task",

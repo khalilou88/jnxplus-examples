@@ -49,8 +49,8 @@
   </build>
 
   <modules>
-    <module>maven-parent-project</module>
-    <module>maven-app</module>
-    <module>maven-lib</module>
+    <module>spring-boot/maven-parent-project</module>
+    <module>spring-boot/maven-app</module>
+    <module>spring-boot/maven-lib</module>
   </modules>
 </project>
