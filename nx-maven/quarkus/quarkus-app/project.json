@@ -1,0 +1,47 @@
+{
+  "name": "quarkus-app",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "./nx-maven/quarkus/quarkus-app/src",
+  "targets": {
+    "build": {
+      "executor": "@jnxplus/nx-maven:run-task",
+      "outputs": [
+        "{projectRoot}/target",
+        "{projectRoot}/.flattened-pom.xml"
+      ],
+      "options": {
+        "task": "compile -DskipTests=true"
+      }
+    },
+    "build-image": {
+      "executor": "@jnxplus/nx-maven:quarkus-build-image"
+    },
+    "serve": {
+      "executor": "@jnxplus/nx-maven:run-task",
+      "options": {
+        "task": "quarkus:dev",
+        "keepItRunning": true
+      },
+      "dependsOn": [
+        "build"
+      ]
+    },
+    "test": {
+      "executor": "@jnxplus/nx-maven:run-task",
+      "options": {
+        "task": "test"
+      },
+      "dependsOn": [
+        "build"
+      ]
+    },
+    "integration-test": {
+      "executor": "@jnxplus/nx-maven:run-task",
+      "options": {
+        "task": "integration-test"
+      }
+    }
+  },
+  "tags": []
+}
