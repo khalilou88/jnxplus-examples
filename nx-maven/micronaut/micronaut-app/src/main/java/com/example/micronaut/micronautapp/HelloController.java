@@ -12,6 +12,7 @@ public class HelloController {
 
   @Inject
   private HelloService helloService;
+
   @Get
   @Produces(MediaType.TEXT_PLAIN)
   public String index() {
