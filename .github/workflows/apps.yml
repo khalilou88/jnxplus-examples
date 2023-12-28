@@ -1,0 +1,54 @@
+name: Apps
+on:
+  schedule:
+    - cron: "0 4 * * *"
+
+jobs:
+  Run_checks:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macOS-latest, windows-latest]
+        node_version: ["20"]
+        java: ["17"]
+      fail-fast: false
+    env:
+      NX_VERBOSE_LOGGING: 'true'
+      NX_MAVEN_CLI_OPTS: "--no-transfer-progress -Dmaven.plugin.validation=VERBOSE"
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: nrwl/nx-set-shas@v3
+
+      - name: Set up node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node_version }}
+          cache: "npm"
+
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: "temurin"
+          java-version: ${{ matrix.java }}
+
+      - name: Install dependencies
+        run: npm i
+
+      - name: Maven-checkstyle-lint
+        run: npm run maven-checkstyle-lint micronaut-app
+
+      - name: Ktlint
+        run: npm run nx ktlint spring-boot-kt-app
+
+      - name: Ktlint-format
+        run: npm run nx ktlint-format spring-boot-kt-app
+
+      - name: Unit tests
+        run: npm run nx test quarkus-app
+
+      - name: Build
+        run: npm run nx build spring-boot-app
