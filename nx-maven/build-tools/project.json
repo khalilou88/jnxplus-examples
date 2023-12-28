@@ -2,6 +2,7 @@
   "name": "build-tools",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
+  "sourceRoot": "./nx-maven/build-tools/src",
   "targets": {
     "build": {
       "executor": "@jnxplus/nx-maven:run-task",
