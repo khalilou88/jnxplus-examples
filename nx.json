@@ -11,6 +11,15 @@
     },
     "lint": {
       "cache": true
+    },
+    "maven-checkstyle-lint": {
+      "cache": true,
+      "dependsOn": [
+        {
+          "projects": ["build-tools"], 
+          "target": "build"
+        }
+      ]
     }
   },
   "namedInputs": {
