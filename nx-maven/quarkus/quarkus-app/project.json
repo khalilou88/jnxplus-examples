@@ -20,14 +20,14 @@
         "task": "quarkus:dev",
         "keepItRunning": true
       },
-      "dependsOn": ["build"]
+      "dependsOn": ["^build"]
     },
     "test": {
       "executor": "@jnxplus/nx-maven:run-task",
       "options": {
         "task": "test"
       },
-      "dependsOn": ["build"]
+      "dependsOn": ["^build"]
     },
     "integration-test": {
       "executor": "@jnxplus/nx-maven:run-task",
