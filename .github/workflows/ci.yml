@@ -45,8 +45,8 @@ jobs:
       - name: Install dependencies
         run: npm i
 
-      - name: Site
-        run: npm run nx run-many -- --target=site
+      - name: Lint
+        run: npm run nx run-many -- --target=lint
 
       - name: Unit tests
         run: npm run nx run-many -- --target=test
