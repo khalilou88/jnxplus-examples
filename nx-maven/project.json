@@ -11,6 +11,12 @@
       "options": {
         "task": "install -N"
       }
+    },
+    "site": {
+      "executor": "@jnxplus/nx-maven:run-task",
+      "options": {
+        "task": "site"
+      }
     }
   }
 }
