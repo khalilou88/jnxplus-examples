@@ -1,4 +1,6 @@
 # Maven target
-target/# Gradle build
+target/
+
+# Gradle build
 build/
 

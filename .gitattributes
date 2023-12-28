@@ -4,7 +4,9 @@
 # Linux start script should use lf
 mvnw text eol=lf
 # Windows script files should use crlf
-mvnw.cmd text eol=crlf#
+mvnw.cmd text eol=crlf
+
+#
 # https://help.github.com/articles/dealing-with-line-endings/
 #
 # Linux start script should use lf
