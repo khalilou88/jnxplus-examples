@@ -8,14 +8,15 @@ import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotNull
 import org.junit.jupiter.api.Test
 
-@MicronautTest 
-class HelloControllerTest(@Client("/") val client: HttpClient) { 
-
-    @Test
-    fun testHello() {
-        val request: HttpRequest<Any> = HttpRequest.GET("/hello")  
-        val body = client.toBlocking().retrieve(request)
-        assertNotNull(body)
-        assertEquals("Hello World", body)
-    }
+@MicronautTest
+class HelloControllerTest(
+  @Client("/") val client: HttpClient,
+) {
+  @Test
+  fun testHello() {
+    val request: HttpRequest<Any> = HttpRequest.GET("/hello")
+    val body = client.toBlocking().retrieve(request)
+    assertNotNull(body)
+    assertEquals("Hello World", body)
+  }
 }

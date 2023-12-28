@@ -8,9 +8,10 @@ import io.micronaut.http.annotation.Produces
 import jakarta.inject.Inject
 
 @Controller("/hello")
-class HelloController(@Inject val helloService: HelloService) {
-
-    @Get
-    @Produces(MediaType.TEXT_PLAIN)
-    fun index() = helloService.greeting()
+class HelloController(
+  @Inject val helloService: HelloService,
+) {
+  @Get
+  @Produces(MediaType.TEXT_PLAIN)
+  fun index() = helloService.greeting()
 }
