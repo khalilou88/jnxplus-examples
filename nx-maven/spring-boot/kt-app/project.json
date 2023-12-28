@@ -49,7 +49,10 @@
       "executor": "@jnxplus/nx-maven:run-task",
       "options": {
         "task": "antrun:run@ktlint-format"
-      }
+      },
+      "dependsOn": [
+        "build"
+      ]
     }
   },
   "tags": []
