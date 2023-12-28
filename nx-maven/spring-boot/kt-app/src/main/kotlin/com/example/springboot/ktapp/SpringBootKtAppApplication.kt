@@ -9,5 +9,3 @@ class SpringBootKtAppApplication
 fun main(args: Array<String>) {
   runApplication<SpringBootKtAppApplication>(*args)
 }
-
-

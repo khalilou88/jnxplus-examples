@@ -11,8 +11,9 @@ import org.springframework.boot.test.web.client.getForEntity
 import org.springframework.http.HttpStatus
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class HelloControllerTests(@Autowired val restTemplate: TestRestTemplate) {
-
+class HelloControllerTests(
+  @Autowired val restTemplate: TestRestTemplate,
+) {
   @BeforeAll
   fun setup() {
     println(">> Setup")
@@ -26,10 +27,8 @@ class HelloControllerTests(@Autowired val restTemplate: TestRestTemplate) {
     assertThat(entity.body).contains("Hello World")
   }
 
-
   @AfterAll
   fun teardown() {
     println(">> Tear down")
   }
-
 }
