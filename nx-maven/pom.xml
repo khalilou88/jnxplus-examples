@@ -71,7 +71,6 @@
         <executions>
           <execution>
             <id>ktlint</id>
-            <phase>verify</phase>
             <configuration>
               <target name="ktlint">
                 <java
