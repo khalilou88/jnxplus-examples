@@ -16,7 +16,7 @@
       "cache": true,
       "dependsOn": [
         {
-          "projects": ["build-tools"], 
+          "projects": ["build-tools"],
           "target": "build"
         }
       ]

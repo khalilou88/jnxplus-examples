@@ -3,15 +3,15 @@ name: Nx migrate
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 1 * * *'
+    - cron: "0 1 * * *"
 
 jobs:
   nx-migrate:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node_version: ['20']
-        java: ['17']
+        node_version: ["20"]
+        java: ["17"]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Check out repository code
@@ -23,7 +23,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node_version }}
-          cache: 'npm'
+          cache: "npm"
 
       - name: Install dependencies
         run: npm i
@@ -78,7 +78,7 @@ jobs:
         if: steps.nx-workspace-outdated.outputs.outdated == 'true'
         uses: actions/setup-java@v3
         with:
-          distribution: 'temurin'
+          distribution: "temurin"
           java-version: ${{ matrix.java }}
 
       - name: Tests
@@ -87,8 +87,8 @@ jobs:
         continue-on-error: true
         run: npm run nx run-many -- --target=test
         env:
-          NX_VERBOSE_LOGGING: 'true'
-          GITHUB_ACTIONS: 'true'
+          NX_VERBOSE_LOGGING: "true"
+          GITHUB_ACTIONS: "true"
 
       - name: Push changes
         if: steps.nx-workspace-outdated.outputs.outdated == 'true' && steps.tests.outcome == 'success'

@@ -81,9 +81,9 @@
                   classpathref="maven.plugin.classpath"
                   classname="com.pinterest.ktlint.Main"
                 >
-                  <jvmarg value="--add-opens=java.base/java.lang=ALL-UNNAMED"/>
+                  <jvmarg value="--add-opens=java.base/java.lang=ALL-UNNAMED" />
                   <!-- see https://pinterest.github.io/ktlint/install/cli/#command-line-usage for more information -->
-                  <arg value="src/**/*.kt"/>
+                  <arg value="src/**/*.kt" />
                 </java>
               </target>
             </configuration>
@@ -103,10 +103,10 @@
                   classpathref="maven.plugin.classpath"
                   classname="com.pinterest.ktlint.Main"
                 >
-                  <jvmarg value="--add-opens=java.base/java.lang=ALL-UNNAMED"/>
+                  <jvmarg value="--add-opens=java.base/java.lang=ALL-UNNAMED" />
                   <!-- see https://pinterest.github.io/ktlint/install/cli/#command-line-usage for more information -->
-                  <arg value="-F"/>
-                  <arg value="src/**/*.kt"/>
+                  <arg value="-F" />
+                  <arg value="src/**/*.kt" />
                 </java>
               </target>
             </configuration>

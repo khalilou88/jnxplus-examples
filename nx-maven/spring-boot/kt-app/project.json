@@ -6,10 +6,7 @@
   "targets": {
     "build": {
       "executor": "@jnxplus/nx-maven:run-task",
-      "outputs": [
-        "{projectRoot}/target",
-        "{projectRoot}/.flattened-pom.xml"
-      ],
+      "outputs": ["{projectRoot}/target", "{projectRoot}/.flattened-pom.xml"],
       "options": {
         "task": "package spring-boot:repackage -DskipTests=true"
       }
@@ -26,36 +23,28 @@
         "task": "spring-boot:run",
         "keepItRunning": true
       },
-      "dependsOn": [
-        "build"
-      ]
+      "dependsOn": ["build"]
     },
     "test": {
       "executor": "@jnxplus/nx-maven:run-task",
       "options": {
         "task": "test"
       },
-      "dependsOn": [
-        "build"
-      ]
+      "dependsOn": ["build"]
     },
     "ktlint": {
       "executor": "@jnxplus/nx-maven:run-task",
       "options": {
         "task": "antrun:run@ktlint"
       },
-      "dependsOn": [
-        "build"
-      ]
+      "dependsOn": ["build"]
     },
     "ktlint-format": {
       "executor": "@jnxplus/nx-maven:run-task",
       "options": {
         "task": "antrun:run@ktlint-format"
       },
-      "dependsOn": [
-        "build"
-      ]
+      "dependsOn": ["build"]
     }
   },
   "tags": []

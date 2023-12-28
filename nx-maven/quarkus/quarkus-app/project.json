@@ -6,10 +6,7 @@
   "targets": {
     "build": {
       "executor": "@jnxplus/nx-maven:run-task",
-      "outputs": [
-        "{projectRoot}/target",
-        "{projectRoot}/.flattened-pom.xml"
-      ],
+      "outputs": ["{projectRoot}/target", "{projectRoot}/.flattened-pom.xml"],
       "options": {
         "task": "compile -DskipTests=true"
       }
@@ -23,18 +20,14 @@
         "task": "quarkus:dev",
         "keepItRunning": true
       },
-      "dependsOn": [
-        "build"
-      ]
+      "dependsOn": ["build"]
     },
     "test": {
       "executor": "@jnxplus/nx-maven:run-task",
       "options": {
         "task": "test"
       },
-      "dependsOn": [
-        "build"
-      ]
+      "dependsOn": ["build"]
     },
     "integration-test": {
       "executor": "@jnxplus/nx-maven:run-task",

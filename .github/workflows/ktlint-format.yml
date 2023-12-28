@@ -12,7 +12,7 @@ jobs:
         java: ["17"]
       fail-fast: false
     env:
-      NX_VERBOSE_LOGGING: 'true'
+      NX_VERBOSE_LOGGING: "true"
       NX_MAVEN_CLI_OPTS: "--no-transfer-progress -Dmaven.plugin.validation=VERBOSE"
     runs-on: ${{ matrix.os }}
     steps:
@@ -40,4 +40,3 @@ jobs:
 
       - name: Ktlint-format
         run: npm run nx run-many -- --target=ktlint-format
-

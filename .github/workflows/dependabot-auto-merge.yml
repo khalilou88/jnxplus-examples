@@ -10,8 +10,8 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node_version: ['20']
-        java: ['17']
+        node_version: ["20"]
+        java: ["17"]
     runs-on: ${{ matrix.os }}
     if: ${{ github.actor == 'dependabot[bot]' || (github.event.pull_request.user.login == 'dependabot[bot]' && github.actor == '@khalilou88') }}
     steps:
@@ -19,7 +19,7 @@ jobs:
         id: metadata
         uses: dependabot/fetch-metadata@v1
         with:
-          github-token: '${{ secrets.GITHUB_TOKEN }}'
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
 
       - name: Check out repository code
         uses: actions/checkout@v3
@@ -28,7 +28,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node_version }}
-          cache: 'npm'
+          cache: "npm"
 
       - name: Install dependencies
         run: npm i
@@ -36,15 +36,15 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v3
         with:
-          distribution: 'temurin'
+          distribution: "temurin"
           java-version: ${{ matrix.java }}
 
       - name: Tests
         id: tests
         run: npm run nx run-many -- --target=test
         env:
-          NX_VERBOSE_LOGGING: 'true'
-          GITHUB_ACTIONS: 'true'
+          NX_VERBOSE_LOGGING: "true"
+          GITHUB_ACTIONS: "true"
 
       - name: Enable auto-merge for Dependabot PRs
         if: steps.tests.outcome == 'success'
