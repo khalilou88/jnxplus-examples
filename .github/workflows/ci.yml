@@ -54,9 +54,6 @@ jobs:
       - name: Ktlint
         run: npm run nx run-many -- --target=ktlint
 
-      - name: Ktlint-format
-        run: npm run nx run-many -- --target=ktlint-format
-
       - name: Unit tests
         run: npm run nx run-many -- --target=test
 

@@ -1,4 +1,4 @@
-name: Apps
+name: Libs
 on:
   schedule:
     - cron: "0 4 * * *"
