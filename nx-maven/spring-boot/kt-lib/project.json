@@ -20,6 +20,18 @@
       "options": {
         "task": "test"
       }
+    },
+    "ktlint": {
+      "executor": "@jnxplus/nx-maven:run-task",
+      "options": {
+        "task": "antrun:run@ktlint"
+      }
+    },
+    "ktlint-format": {
+      "executor": "@jnxplus/nx-maven:run-task",
+      "options": {
+        "task": "antrun:run@ktlint-format"
+      }
     }
   },
   "tags": []
