@@ -45,7 +45,7 @@
         "task": "antrun:run@ktlint"
       },
       "dependsOn": [
-        "^build"
+        "build"
       ]
     },
     "ktlint-format": {
@@ -54,7 +54,7 @@
         "task": "antrun:run@ktlint-format"
       },
       "dependsOn": [
-        "^build"
+        "build"
       ]
     }
   },
