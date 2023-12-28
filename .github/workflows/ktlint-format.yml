@@ -1,4 +1,4 @@
-name: Lint
+name: Ktlint-format
 on:
   schedule:
     - cron: "0 3 * * *"
@@ -38,11 +38,6 @@ jobs:
       - name: Install dependencies
         run: npm i
 
-      - name: Maven-checkstyle-lint
-        run: npm run nx run-many -- --target=maven-checkstyle-lint
-
-      - name: Ktlint
-        run: npm run nx run-many -- --target=ktlint
-
-
+      - name: Ktlint-format
+        run: npm run nx run-many -- --target=ktlint-format
 
