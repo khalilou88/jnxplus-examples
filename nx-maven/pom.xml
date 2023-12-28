@@ -17,6 +17,7 @@
     <spring.boot.version>3.2.0</spring.boot.version>
     <micronaut.version>4.2.0</micronaut.version>
     <quarkus.version>3.5.3</quarkus.version>
+    <maven-checkstyle-plugin.version>3.3.1</maven-checkstyle-plugin.version>
   </properties>
 
   <build>
@@ -50,7 +51,7 @@
      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>3.3.1</version>
+        <version>${maven-checkstyle-plugin.version}</version>
         <dependencies>
           <dependency>
             <groupId>com.example</groupId>
@@ -68,7 +69,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>3.3.1</version>
+        <version>${maven-checkstyle-plugin.version}</version>
         <configuration>
           <configLocation>checkstyle.xml</configLocation>
           <headerLocation>LICENSE.txt</headerLocation>
