@@ -1,17 +1,7 @@
-name: CI
+name: Apps
 on:
-  # Trigger manually or on schedule
-  workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - "**.md"
-  pull_request:
-    branches:
-      - main
   schedule:
-    - cron: "0 2 * * *"
+    - cron: "0 4 * * *"
 
 jobs:
   Run_checks:
@@ -49,16 +39,16 @@ jobs:
         run: npm i
 
       - name: Maven-checkstyle-lint
-        run: npm run nx run-many -- --target=maven-checkstyle-lint
+        run: npm run maven-checkstyle-lint micronaut-app
 
       - name: Ktlint
-        run: npm run nx run-many -- --target=ktlint
+        run: npm run nx ktlint spring-boot-kt-app
 
       - name: Ktlint-format
-        run: npm run nx run-many -- --target=ktlint-format
+        run: npm run nx ktlint-format spring-boot-kt-app
 
       - name: Unit tests
-        run: npm run nx run-many -- --target=test
+        run: npm run nx test quarkus-app
 
       - name: Build
-        run: npm run nx run-many -- --target=build
+        run: npm run nx build spring-boot-app
