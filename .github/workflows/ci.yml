@@ -20,7 +20,7 @@ jobs:
         os: [ubuntu-latest, macOS-latest, windows-latest]
         node_version: ["20"]
         java: ["17"]
-      fail-fast: true
+      fail-fast: false
     env:
       NX_MAVEN_CLI_OPTS: "--no-transfer-progress -Dmaven.plugin.validation=VERBOSE"
     runs-on: ${{ matrix.os }}
