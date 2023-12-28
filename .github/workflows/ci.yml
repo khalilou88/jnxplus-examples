@@ -51,11 +51,11 @@ jobs:
       - name: Maven-checkstyle-lint
         run: npm run nx run-many -- --target=maven-checkstyle-lint
 
-      - name: Ktlint-format
-        run: npm run nx run-many -- --target=ktlint-format
-
       - name: Ktlint
         run: npm run nx run-many -- --target=ktlint
+
+      - name: Ktlint-format
+        run: npm run nx run-many -- --target=ktlint-format
 
       - name: Unit tests
         run: npm run nx run-many -- --target=test
