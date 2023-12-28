@@ -53,5 +53,5 @@ jobs:
       - name: Build
         run: npm run nx run-many -- --target=build
 
-      - name: Lint
-        run: npm run nx run-many -- --target=lint
+      - name: Maven-checkstyle-lint
+        run: npm run nx run-many -- --target=maven-checkstyle-lint

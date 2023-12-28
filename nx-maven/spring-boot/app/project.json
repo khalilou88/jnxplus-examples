@@ -39,7 +39,7 @@
         "build"
       ]
     },
-    "lint": {
+    "maven-checkstyle-lint": {
       "executor": "@jnxplus/nx-maven:run-task",
       "options": {
         "task": "checkstyle:check"
