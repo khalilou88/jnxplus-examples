@@ -1,5 +1,6 @@
 # Maven target
 target/
+nx-maven/.m2/repository
 
 # Gradle build
 build/

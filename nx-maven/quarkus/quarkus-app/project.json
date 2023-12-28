@@ -41,6 +41,12 @@
       "options": {
         "task": "integration-test"
       }
+    },
+    "maven-checkstyle-lint": {
+      "executor": "@jnxplus/nx-maven:run-task",
+      "options": {
+        "task": "checkstyle:check"
+      }
     }
   },
   "tags": []

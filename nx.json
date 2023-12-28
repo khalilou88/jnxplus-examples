@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "affected": {
-    "defaultBase": "master"
+    "defaultBase": "main"
   },
   "targetDefaults": {
     "build": {
@@ -11,6 +11,15 @@
     },
     "lint": {
       "cache": true
+    },
+    "maven-checkstyle-lint": {
+      "cache": true,
+      "dependsOn": [
+        {
+          "projects": ["build-tools"], 
+          "target": "build"
+        }
+      ]
     }
   },
   "namedInputs": {

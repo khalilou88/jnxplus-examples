@@ -32,6 +32,7 @@
     <micronaut.core.version>4.2.0</micronaut.core.version>
     <micronaut.serialization.version>2.4.0</micronaut.serialization.version>
     <micronaut.test.resources.version>2.2.0</micronaut.test.resources.version>
+    <micronaut.aot.version>2.1.1</micronaut.aot.version>
   </properties>
 
   <dependencyManagement>
