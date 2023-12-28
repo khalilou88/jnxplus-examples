@@ -45,13 +45,11 @@ jobs:
       - name: Install dependencies
         run: npm i
 
-      - name: Lint
-        run: npm run nx run-many -- --target=lint
-
       - name: Unit tests
         run: npm run nx run-many -- --target=test
 
       - name: Build
         run: npm run nx run-many -- --target=build
 
-
+      - name: Lint
+        run: npm run nx run-many -- --target=lint
