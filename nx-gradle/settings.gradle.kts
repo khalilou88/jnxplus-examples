@@ -12,3 +12,7 @@ pluginManagement {
   }
 }
 rootProject.name = "root-project"
+include(":spring-boot:spring-boot-app")
+include(":spring-boot:spring-boot-lib")
+include(":spring-boot:spring-boot-kt-app")
+include(":spring-boot:spring-boot-kt-lib")
