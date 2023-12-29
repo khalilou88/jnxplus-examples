@@ -1,5 +1,6 @@
 name: Apps
 on:
+  workflow_dispatch:
   schedule:
     - cron: "0 4 * * *"
 
@@ -39,10 +40,10 @@ jobs:
         run: npm i
 
       - name: Maven-checkstyle-lint
-        run: npm run maven-checkstyle-lint micronaut-app
+        run: npm run nx maven-checkstyle-lint micronaut-app
 
       - name: Ktlint
-        run: npm run nx ktlint spring-boot-kt-app
+        run: npm run nx ktlint quarkus-kt-app
 
       - name: Ktlint-format
         run: npm run nx ktlint-format spring-boot-kt-app
