@@ -1,5 +1,5 @@
 {
-  "name": "spring-boot-spring-boot-kt-lib",
+  "name": "spring-boot-kt-lib",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "./nx-gradle/spring-boot/spring-boot-kt-lib/src",
