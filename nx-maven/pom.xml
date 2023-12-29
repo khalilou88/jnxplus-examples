@@ -141,5 +141,7 @@
     <module>quarkus/quarkus-parent-project</module>
     <module>quarkus/quarkus-app</module>
     <module>quarkus/quarkus-lib</module>
+    <module>quarkus/kt-app</module>
+    <module>quarkus/kt-lib</module>
   </modules>
 </project>
