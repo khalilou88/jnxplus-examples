@@ -1,8 +1,8 @@
 {
-  "name": "spring-boot-lib",
+  "name": "g-sb-kt-lib",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "sourceRoot": "./nx-gradle/spring-boot/spring-boot-lib/src",
+  "sourceRoot": "./nx-gradle/spring-boot/g-sb-kt-lib/src",
   "targets": {
     "build": {
       "executor": "@jnxplus/nx-gradle:run-task",
