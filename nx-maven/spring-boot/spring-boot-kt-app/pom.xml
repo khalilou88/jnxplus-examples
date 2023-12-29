@@ -13,7 +13,7 @@
     <groupId>com.example</groupId>
     <artifactId>spring-boot-parent-project</artifactId>
     <version>${revision}</version>
-    <relativePath>../parent-project/pom.xml</relativePath>
+    <relativePath>../spring-boot-parent-project/pom.xml</relativePath>
   </parent>
 
   <dependencies>
