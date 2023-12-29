@@ -1,5 +1,5 @@
 {
-  "name": "spring-boot-kt-app",
+  "name": "g-sb-kt-app",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "sourceRoot": "./nx-gradle/spring-boot/spring-boot-kt-app/src",

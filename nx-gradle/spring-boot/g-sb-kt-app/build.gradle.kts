@@ -26,7 +26,7 @@ dependencies {
   implementation("org.jetbrains.kotlin:kotlin-reflect")
   implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
   testImplementation("org.springframework.boot:spring-boot-starter-test")
-  implementation(project(":spring-boot:spring-boot-kt-lib"))
+  implementation(project(":spring-boot:g-sb-kt-lib"))
 }
 
 tasks.withType<KotlinCompile> {

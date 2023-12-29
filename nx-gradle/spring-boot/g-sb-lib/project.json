@@ -1,5 +1,5 @@
 {
-  "name": "spring-boot-lib",
+  "name": "g-sb-lib",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "./nx-gradle/spring-boot/spring-boot-lib/src",

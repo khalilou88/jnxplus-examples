@@ -20,7 +20,7 @@ repositories {
 dependencies {
   	implementation("org.springframework.boot:spring-boot-starter-web")
   	testImplementation("org.springframework.boot:spring-boot-starter-test")
-    implementation(project(":spring-boot:spring-boot-lib"))
+    implementation(project(":spring-boot:g-sb-lib"))
 }
 
 tasks.withType<Test> {
