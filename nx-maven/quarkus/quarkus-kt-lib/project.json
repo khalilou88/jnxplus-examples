@@ -1,21 +1,10 @@
 {
-  "name": "spring-boot-lib",
+  "name": "quarkus-kt-lib",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "sourceRoot": "./nx-maven/spring-boot/lib/src",
+  "sourceRoot": "./nx-maven/quarkus/quarkus-kt-lib/src",
   "targets": {
     "build": {
-      "executor": "@jnxplus/nx-maven:run-task",
-      "outputs": [
-        "{projectRoot}/target",
-        "{options.outputDirLocalRepo}",
-        "{projectRoot}/.flattened-pom.xml"
-      ],
-      "options": {
-        "task": "install -DskipTests=true"
-      }
-    },
-    "target-with-outputDirLocalRepo": {
       "executor": "@jnxplus/nx-maven:run-task",
       "outputs": [
         "{projectRoot}/target",
@@ -32,10 +21,16 @@
         "task": "test"
       }
     },
-    "maven-checkstyle-lint": {
+    "ktlint": {
       "executor": "@jnxplus/nx-maven:run-task",
       "options": {
-        "task": "checkstyle:check"
+        "task": "antrun:run@ktlint"
+      }
+    },
+    "ktlint-format": {
+      "executor": "@jnxplus/nx-maven:run-task",
+      "options": {
+        "task": "antrun:run@ktlint-format"
       }
     }
   },

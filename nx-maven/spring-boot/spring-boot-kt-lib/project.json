@@ -2,7 +2,7 @@
   "name": "spring-boot-kt-lib",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "sourceRoot": "./nx-maven/spring-boot/kt-lib/src",
+  "sourceRoot": "./nx-maven/spring-boot/spring-boot-kt-lib/src",
   "targets": {
     "build": {
       "executor": "@jnxplus/nx-maven:run-task",
