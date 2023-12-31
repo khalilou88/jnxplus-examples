@@ -6,7 +6,7 @@
 #
 # Before building the container image run:
 #
-# nx build quarkus-g-q-app --args="-Dquarkus.package.type=native"
+# nx build quarkus-g-q-app --task="build -Dquarkus.package.type=native"
 #
 # Then, build the image with:
 #
