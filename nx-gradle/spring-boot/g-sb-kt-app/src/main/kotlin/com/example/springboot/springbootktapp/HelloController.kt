@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.RestController
 class HelloController(
   @Autowired val helloService: HelloService,
 ) {
-
-    @GetMapping("/")
-    fun greeting():String = helloService.message()
-
+  @GetMapping("/")
+  fun greeting(): String = helloService.message()
 }
