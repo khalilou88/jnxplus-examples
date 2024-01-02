@@ -30,7 +30,7 @@
         "task": "test"
       }
     },
-    "check": {
+    "gradle-checkstyle-lint": {
       "executor": "@jnxplus/nx-gradle:run-task",
       "options": {
         "task": "check"
