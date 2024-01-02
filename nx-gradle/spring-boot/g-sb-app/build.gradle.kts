@@ -27,8 +27,3 @@ dependencies {
 tasks.withType<Test> {
   useJUnitPlatform()
 }
-
-checkstyle {
-  toolVersion = "10.3.3"
-  configFile = rootProject.file("config/checkstyle/checkstyle.xml")
-}
