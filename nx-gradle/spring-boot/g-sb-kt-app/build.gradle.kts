@@ -7,6 +7,7 @@ plugins {
   id("io.spring.dependency-management")
   kotlin("jvm")
   kotlin("plugin.spring")
+  id("org.jlleitschuh.gradle.ktlint") version "12.0.3"
 }
 
 group = "com.example"
