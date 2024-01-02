@@ -29,6 +29,18 @@
       "options": {
         "task": "test"
       }
+    },
+    "ktlint": {
+      "executor": "@jnxplus/nx-gradle:run-task",
+      "options": {
+        "task": "ktlintCheck"
+      }
+    },
+    "ktlint-format": {
+      "executor": "@jnxplus/nx-gradle:run-task",
+      "options": {
+        "task": "ktlintFormat"
+      }
     }
   },
   "tags": []
