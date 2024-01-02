@@ -3,8 +3,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 val javaVersion: String by project
 
 plugins {
-	id("org.springframework.boot") apply false
-	id("io.spring.dependency-management")
+  id("org.springframework.boot") apply false
+  id("io.spring.dependency-management")
   kotlin("jvm")
   kotlin("plugin.spring")
   id("org.jlleitschuh.gradle.ktlint") version "12.0.3"
@@ -18,13 +18,13 @@ java {
 }
 
 repositories {
-	mavenCentral()
+  mavenCentral()
 }
 
 dependencyManagement {
-	imports {
-		mavenBom(org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES)
-	}
+  imports {
+    mavenBom(org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES)
+  }
 }
 
 dependencies {
