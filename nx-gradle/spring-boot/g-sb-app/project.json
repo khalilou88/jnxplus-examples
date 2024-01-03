@@ -29,6 +29,12 @@
       "options": {
         "task": "test"
       }
+    },
+    "gradle-checkstyle-lint": {
+      "executor": "@jnxplus/nx-gradle:run-task",
+      "options": {
+        "task": "check"
+      }
     }
   },
   "tags": []

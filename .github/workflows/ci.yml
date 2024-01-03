@@ -51,6 +51,9 @@ jobs:
       - name: Maven-checkstyle-lint
         run: npm run nx run-many -- --target=maven-checkstyle-lint
 
+      - name: Gradle-checkstyle-lint
+        run: npm run nx run-many -- --target=gradle-checkstyle-lint
+
       - name: Ktlint
         run: npm run nx run-many -- --target=ktlint
 
