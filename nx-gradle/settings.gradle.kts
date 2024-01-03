@@ -15,6 +15,7 @@ pluginManagement {
   }
 }
 rootProject.name = "root-project"
+include(":quarkus:g-q-lib")
 include(":quarkus:g-q-kt-lib")
 include(":quarkus:g-q-kt-app")
 include(":spring-boot:g-sb-app")
