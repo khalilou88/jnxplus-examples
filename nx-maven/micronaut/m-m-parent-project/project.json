@@ -1,5 +1,5 @@
 {
-  "name": "micronaut-parent-project",
+  "name": "m-m-parent-project",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "targets": {

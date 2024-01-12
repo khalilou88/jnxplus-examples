@@ -1,8 +1,8 @@
 {
-  "name": "micronaut-app",
+  "name": "m-m-kt-app",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "./nx-maven/micronaut/micronaut-app/src",
+  "sourceRoot": "./nx-maven/micronaut/m-m-kt-app/src",
   "targets": {
     "build": {
       "executor": "@jnxplus/nx-maven:run-task",
@@ -23,20 +23,28 @@
         "task": "mn:run",
         "keepItRunning": true
       },
-      "dependsOn": ["^build"]
+      "dependsOn": ["build"]
     },
     "test": {
       "executor": "@jnxplus/nx-maven:run-task",
       "options": {
         "task": "test"
       },
-      "dependsOn": ["^build"]
+      "dependsOn": ["build"]
     },
-    "maven-checkstyle-lint": {
+    "ktlint": {
       "executor": "@jnxplus/nx-maven:run-task",
       "options": {
-        "task": "checkstyle:check"
-      }
+        "task": "antrun:run@ktlint"
+      },
+      "dependsOn": ["^build"]
+    },
+    "ktlint-format": {
+      "executor": "@jnxplus/nx-maven:run-task",
+      "options": {
+        "task": "antrun:run@ktlint-format"
+      },
+      "dependsOn": ["^build"]
     }
   },
   "tags": []

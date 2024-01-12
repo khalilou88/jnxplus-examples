@@ -5,15 +5,15 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
 >
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>micronaut-lib</artifactId>
-  <name>micronaut-lib</name>
+  <artifactId>m-m-lib</artifactId>
+  <name>m-m-lib</name>
   <description>This project was generated with nx-maven</description>
 
   <parent>
     <groupId>com.example</groupId>
-    <artifactId>micronaut-parent-project</artifactId>
+    <artifactId>m-m-parent-project</artifactId>
     <version>${revision}</version>
-    <relativePath>../micronaut-parent-project/pom.xml</relativePath>
+    <relativePath>../m-m-parent-project/pom.xml</relativePath>
   </parent>
 
   <dependencies>

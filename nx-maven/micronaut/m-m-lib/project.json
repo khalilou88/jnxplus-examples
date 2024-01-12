@@ -1,8 +1,8 @@
 {
-  "name": "micronaut-kt-lib",
+  "name": "m-m-lib",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "sourceRoot": "./nx-maven/micronaut/micronaut-kt-lib/src",
+  "sourceRoot": "./nx-maven/micronaut/m-m-lib/src",
   "targets": {
     "build": {
       "executor": "@jnxplus/nx-maven:run-task",
@@ -21,16 +21,10 @@
         "task": "test"
       }
     },
-    "ktlint": {
+    "maven-checkstyle-lint": {
       "executor": "@jnxplus/nx-maven:run-task",
       "options": {
-        "task": "antrun:run@ktlint"
-      }
-    },
-    "ktlint-format": {
-      "executor": "@jnxplus/nx-maven:run-task",
-      "options": {
-        "task": "antrun:run@ktlint-format"
+        "task": "checkstyle:check"
       }
     }
   },

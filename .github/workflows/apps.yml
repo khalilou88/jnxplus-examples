@@ -40,7 +40,7 @@ jobs:
         run: npm i
 
       - name: Maven-checkstyle-lint
-        run: npm run nx maven-checkstyle-lint micronaut-app
+        run: npm run nx maven-checkstyle-lint m-m-app
 
       - name: Ktlint
         run: npm run nx ktlint m-q-kt-app

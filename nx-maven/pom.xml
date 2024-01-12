@@ -133,11 +133,11 @@
     <module>spring-boot/m-sb-lib</module>
     <module>spring-boot/m-sb-kt-app</module>
     <module>spring-boot/m-sb-kt-lib</module>
-    <module>micronaut/micronaut-parent-project</module>
-    <module>micronaut/micronaut-app</module>
-    <module>micronaut/micronaut-lib</module>
-    <module>micronaut/micronaut-kt-app</module>
-    <module>micronaut/micronaut-kt-lib</module>
+    <module>micronaut/m-m-parent-project</module>
+    <module>micronaut/m-m-app</module>
+    <module>micronaut/m-m-lib</module>
+    <module>micronaut/m-m-kt-app</module>
+    <module>micronaut/m-m-kt-lib</module>
     <module>quarkus/m-q-parent-project</module>
     <module>quarkus/m-q-app</module>
     <module>quarkus/m-q-lib</module>
