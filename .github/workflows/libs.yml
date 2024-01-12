@@ -46,10 +46,10 @@ jobs:
         run: npm run nx ktlint m-sb-kt-lib
 
       - name: Ktlint-format
-        run: npm run nx ktlint-format quarkus-kt-lib
+        run: npm run nx ktlint-format m-q-kt-lib
 
       - name: Unit tests
-        run: npm run nx test quarkus-lib
+        run: npm run nx test m-q-lib
 
       - name: Build
         run: npm run nx build m-sb-lib

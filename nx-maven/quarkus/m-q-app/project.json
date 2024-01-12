@@ -1,8 +1,8 @@
 {
-  "name": "quarkus-kt-app",
+  "name": "m-q-app",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "./nx-maven/quarkus/quarkus-kt-app/src",
+  "sourceRoot": "./nx-maven/quarkus/m-q-app/src",
   "targets": {
     "build": {
       "executor": "@jnxplus/nx-maven:run-task",
@@ -20,14 +20,14 @@
         "task": "quarkus:dev",
         "keepItRunning": true
       },
-      "dependsOn": ["build"]
+      "dependsOn": ["^build"]
     },
     "test": {
       "executor": "@jnxplus/nx-maven:run-task",
       "options": {
         "task": "test"
       },
-      "dependsOn": ["build"]
+      "dependsOn": ["^build"]
     },
     "integration-test": {
       "executor": "@jnxplus/nx-maven:run-task",
@@ -35,19 +35,11 @@
         "task": "integration-test"
       }
     },
-    "ktlint": {
+    "maven-checkstyle-lint": {
       "executor": "@jnxplus/nx-maven:run-task",
       "options": {
-        "task": "antrun:run@ktlint"
-      },
-      "dependsOn": ["^build"]
-    },
-    "ktlint-format": {
-      "executor": "@jnxplus/nx-maven:run-task",
-      "options": {
-        "task": "antrun:run@ktlint-format"
-      },
-      "dependsOn": ["^build"]
+        "task": "checkstyle:check"
+      }
     }
   },
   "tags": []

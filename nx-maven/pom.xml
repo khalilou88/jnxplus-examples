@@ -138,10 +138,10 @@
     <module>micronaut/micronaut-lib</module>
     <module>micronaut/micronaut-kt-app</module>
     <module>micronaut/micronaut-kt-lib</module>
-    <module>quarkus/quarkus-parent-project</module>
-    <module>quarkus/quarkus-app</module>
-    <module>quarkus/quarkus-lib</module>
-    <module>quarkus/quarkus-kt-app</module>
-    <module>quarkus/quarkus-kt-lib</module>
+    <module>quarkus/m-q-parent-project</module>
+    <module>quarkus/m-q-app</module>
+    <module>quarkus/m-q-lib</module>
+    <module>quarkus/m-q-kt-app</module>
+    <module>quarkus/m-q-kt-lib</module>
   </modules>
 </project>

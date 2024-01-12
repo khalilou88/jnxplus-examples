@@ -5,15 +5,15 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
 >
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>quarkus-kt-lib</artifactId>
-  <name>quarkus-kt-lib</name>
+  <artifactId>m-q-kt-lib</artifactId>
+  <name>m-q-kt-lib</name>
   <description>This project was generated with nx-maven</description>
 
   <parent>
     <groupId>com.example</groupId>
-    <artifactId>quarkus-parent-project</artifactId>
+    <artifactId>m-q-parent-project</artifactId>
     <version>${revision}</version>
-    <relativePath>../quarkus-parent-project/pom.xml</relativePath>
+    <relativePath>../m-q-parent-project/pom.xml</relativePath>
   </parent>
 
   <dependencies>

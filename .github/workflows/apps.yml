@@ -43,13 +43,13 @@ jobs:
         run: npm run nx maven-checkstyle-lint micronaut-app
 
       - name: Ktlint
-        run: npm run nx ktlint quarkus-kt-app
+        run: npm run nx ktlint m-q-kt-app
 
       - name: Ktlint-format
         run: npm run nx ktlint-format m-sb-kt-app
 
       - name: Unit tests
-        run: npm run nx test quarkus-app
+        run: npm run nx test m-q-app
 
       - name: Build
         run: npm run nx build m-sb-app
