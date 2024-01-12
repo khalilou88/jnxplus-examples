@@ -9,7 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
 class HelloServiceTests(
-    @Autowired val helloService: HelloService,
+  @Autowired val helloService: HelloService,
 ) {
   @BeforeAll
   fun setup() {
