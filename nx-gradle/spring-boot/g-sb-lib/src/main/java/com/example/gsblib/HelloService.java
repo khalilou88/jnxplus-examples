@@ -1,4 +1,4 @@
-package com.example.springboot.springbootlib;
+package com.example.gsblib;
 
 import org.springframework.stereotype.Service;
 

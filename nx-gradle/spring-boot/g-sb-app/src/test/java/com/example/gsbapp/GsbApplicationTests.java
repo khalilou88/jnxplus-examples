@@ -1,10 +1,10 @@
-package com.example.springboot.springbootapp;
+package com.example.gsbapp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringBootSpringBootAppApplicationTests {
+class GsbApplicationTests {
 
   @Test
   void contextLoads() {}

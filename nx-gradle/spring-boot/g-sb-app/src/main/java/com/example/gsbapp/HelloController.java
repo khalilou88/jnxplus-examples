@@ -1,6 +1,6 @@
-package com.example.springboot.springbootapp;
+package com.example.gsbapp;
 
-import com.example.springboot.springbootlib.HelloService;
+import com.example.gsblib.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

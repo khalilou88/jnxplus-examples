@@ -1,4 +1,4 @@
-package com.example.springboot.springbootlib;
+package com.example.gsblib;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
