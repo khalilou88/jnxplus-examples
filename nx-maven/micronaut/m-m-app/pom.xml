@@ -24,9 +24,7 @@
       com.example.micronaut.micronautapp.aot.generated
     </micronaut.aot.packageName>
     <micronaut.runtime>netty</micronaut.runtime>
-    <exec.mainClass>
-      com.example.micronaut.micronautapp.Application
-    </exec.mainClass>
+    <exec.mainClass>com.example.mmapp.Application</exec.mainClass>
   </properties>
 
   <repositories>
