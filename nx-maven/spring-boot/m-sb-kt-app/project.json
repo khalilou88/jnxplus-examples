@@ -1,8 +1,8 @@
 {
-  "name": "spring-boot-app",
+  "name": "m-sb-kt-app",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "./nx-maven/spring-boot/spring-boot-app/src",
+  "sourceRoot": "./nx-maven/spring-boot/m-sb-kt-app/src",
   "targets": {
     "build": {
       "executor": "@jnxplus/nx-maven:run-task",
@@ -32,11 +32,19 @@
       },
       "dependsOn": ["^build"]
     },
-    "maven-checkstyle-lint": {
+    "ktlint": {
       "executor": "@jnxplus/nx-maven:run-task",
       "options": {
-        "task": "checkstyle:check"
-      }
+        "task": "antrun:run@ktlint"
+      },
+      "dependsOn": ["^build"]
+    },
+    "ktlint-format": {
+      "executor": "@jnxplus/nx-maven:run-task",
+      "options": {
+        "task": "antrun:run@ktlint-format"
+      },
+      "dependsOn": ["^build"]
     }
   },
   "tags": []

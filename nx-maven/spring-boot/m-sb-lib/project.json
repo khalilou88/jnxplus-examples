@@ -1,10 +1,21 @@
 {
-  "name": "spring-boot-kt-lib",
+  "name": "m-sb-lib",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "sourceRoot": "./nx-maven/spring-boot/spring-boot-kt-lib/src",
+  "sourceRoot": "./nx-maven/spring-boot/m-sb-lib/src",
   "targets": {
     "build": {
+      "executor": "@jnxplus/nx-maven:run-task",
+      "outputs": [
+        "{projectRoot}/target",
+        "{options.outputDirLocalRepo}",
+        "{projectRoot}/.flattened-pom.xml"
+      ],
+      "options": {
+        "task": "install -DskipTests=true"
+      }
+    },
+    "target-with-outputDirLocalRepo": {
       "executor": "@jnxplus/nx-maven:run-task",
       "outputs": [
         "{projectRoot}/target",
@@ -21,16 +32,10 @@
         "task": "test"
       }
     },
-    "ktlint": {
+    "maven-checkstyle-lint": {
       "executor": "@jnxplus/nx-maven:run-task",
       "options": {
-        "task": "antrun:run@ktlint"
-      }
-    },
-    "ktlint-format": {
-      "executor": "@jnxplus/nx-maven:run-task",
-      "options": {
-        "task": "antrun:run@ktlint-format"
+        "task": "checkstyle:check"
       }
     }
   },

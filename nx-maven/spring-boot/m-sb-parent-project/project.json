@@ -1,5 +1,5 @@
 {
-  "name": "spring-boot-parent-project",
+  "name": "m-sb-parent-project",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "targets": {

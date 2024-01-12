@@ -5,21 +5,21 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
 >
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>spring-boot-kt-app</artifactId>
-  <name>spring-boot-kt-app</name>
+  <artifactId>m-sb-kt-lib</artifactId>
+  <name>m-sb-kt-lib</name>
   <description>This project was generated with nx-maven</description>
 
   <parent>
     <groupId>com.example</groupId>
-    <artifactId>spring-boot-parent-project</artifactId>
+    <artifactId>m-sb-parent-project</artifactId>
     <version>${revision}</version>
-    <relativePath>../spring-boot-parent-project/pom.xml</relativePath>
+    <relativePath>../m-sb-parent-project/pom.xml</relativePath>
   </parent>
 
   <dependencies>
     <dependency>
       <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
+      <artifactId>spring-boot-starter</artifactId>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.kotlin</groupId>
@@ -29,15 +29,11 @@
       <groupId>org.jetbrains.kotlin</groupId>
       <artifactId>kotlin-stdlib-jdk8</artifactId>
     </dependency>
+
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.example</groupId>
-      <artifactId>spring-boot-kt-lib</artifactId>
-      <version>${project.version}</version>
     </dependency>
   </dependencies>
 
@@ -47,10 +43,6 @@
       ${project.basedir}/src/test/kotlin
     </testSourceDirectory>
     <plugins>
-      <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-      </plugin>
       <plugin>
         <groupId>org.jetbrains.kotlin</groupId>
         <artifactId>kotlin-maven-plugin</artifactId>

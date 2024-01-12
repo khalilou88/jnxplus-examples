@@ -5,15 +5,15 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
 >
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>spring-boot-lib</artifactId>
-  <name>spring-boot-lib</name>
+  <artifactId>m-sb-lib</artifactId>
+  <name>m-sb-lib</name>
   <description>This project was generated with nx-maven</description>
 
   <parent>
     <groupId>com.example</groupId>
-    <artifactId>spring-boot-parent-project</artifactId>
+    <artifactId>m-sb-parent-project</artifactId>
     <version>${revision}</version>
-    <relativePath>../spring-boot-parent-project/pom.xml</relativePath>
+    <relativePath>../m-sb-parent-project/pom.xml</relativePath>
   </parent>
 
   <dependencies>

@@ -46,10 +46,10 @@ jobs:
         run: npm run nx ktlint quarkus-kt-app
 
       - name: Ktlint-format
-        run: npm run nx ktlint-format spring-boot-kt-app
+        run: npm run nx ktlint-format m-sb-kt-app
 
       - name: Unit tests
         run: npm run nx test quarkus-app
 
       - name: Build
-        run: npm run nx build spring-boot-app
+        run: npm run nx build m-sb-app
