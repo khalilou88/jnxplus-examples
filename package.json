@@ -11,8 +11,8 @@
   },
   "private": true,
   "devDependencies": {
-    "@jnxplus/nx-gradle": "^0.17.17",
-    "@jnxplus/nx-maven": "^0.22.9",
+    "@jnxplus/nx-gradle": "^0.18.0",
+    "@jnxplus/nx-maven": "^0.23.0",
     "@nx/js": "17.2.8",
     "@nx/workspace": "17.2.8",
     "@prettier/plugin-xml": "^3.2.2",
@@ -20,6 +20,6 @@
     "lint-staged": "^15.2.0",
     "nx": "17.2.8",
     "prettier": "^3.1.1",
-    "prettier-plugin-java": "^2.3.1"
+    "prettier-plugin-java": "^2.5.0"
   }
 }
