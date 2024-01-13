@@ -40,7 +40,7 @@ jobs:
         run: npm i
 
       - name: Maven-checkstyle-lint
-        run: npm run nx run-many -- --target=maven-checkstyle-lint
+        run: npm run nx run-many -- --target=maven-checkstyle-lint --parallel=1
 
       - name: Gradle-checkstyle-lint
         run: npm run nx run-many -- --target=gradle-checkstyle-lint
