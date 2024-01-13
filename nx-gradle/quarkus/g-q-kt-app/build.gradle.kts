@@ -20,7 +20,7 @@ dependencies {
     implementation("io.quarkus:quarkus-config-yaml")
     testImplementation("io.quarkus:quarkus-junit5")
     testImplementation("io.rest-assured:rest-assured")
-    implementation(project("::quarkus:g-q-kt-lib"))
+    implementation(project(":quarkus:g-q-kt-lib"))
 }
 
 group = "com.example"
