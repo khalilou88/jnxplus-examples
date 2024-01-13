@@ -12,13 +12,13 @@ repositories {
 }
 
 dependencies {
-	implementation(project("::quarkus:g-q-lib"))
     implementation(enforcedPlatform("io.quarkus.platform:quarkus-bom:${quarkusVersion}"))
     implementation("io.quarkus:quarkus-resteasy-reactive")
     implementation("io.quarkus:quarkus-resteasy-reactive-jackson")
     implementation("io.quarkus:quarkus-arc")
     testImplementation("io.quarkus:quarkus-junit5")
     testImplementation("io.rest-assured:rest-assured")
+    implementation(project(":quarkus:g-q-lib"))
 }
 
 group "com.example"
