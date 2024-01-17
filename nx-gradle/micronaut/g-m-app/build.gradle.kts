@@ -1,9 +1,7 @@
-val javaVersion: String by project
-
 plugins {
-    id("com.github.johnrengelman.shadow")
-    id("io.micronaut.application")
-    id("io.micronaut.aot")
+    alias(libs.plugins.github.johnrengelman.shadow)
+    alias(libs.plugins.micronaut.application)
+    alias(libs.plugins.micronaut.aot)
 }
 
 version = "0.0.1-SNAPSHOT"
@@ -14,10 +12,10 @@ repositories {
 }
 
 dependencies {
-    annotationProcessor("io.micronaut.serde:micronaut-serde-processor")
-    implementation("io.micronaut.serde:micronaut-serde-jackson")
-    runtimeOnly("ch.qos.logback:logback-classic")
-    testImplementation("io.micronaut:micronaut-http-client")
+    annotationProcessor(mn.micronaut.serde.processor)
+    implementation(mn.micronaut.serde.jackson)
+    runtimeOnly(mn.logback.classic)
+    testImplementation(mn.micronaut.http.client)
     implementation(project(":micronaut:g-m-lib"))
 }
 
@@ -27,8 +25,8 @@ application {
 }
 
 java {
-    sourceCompatibility = JavaVersion.toVersion(javaVersion)
-    targetCompatibility = JavaVersion.toVersion(javaVersion)
+    sourceCompatibility = JavaVersion.toVersion(libs.versions.java.get())
+    targetCompatibility = JavaVersion.toVersion(libs.versions.java.get())
 }
 
 graalvmNative.toolchainDetection.set(false)

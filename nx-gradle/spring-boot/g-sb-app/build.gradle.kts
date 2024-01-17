@@ -1,9 +1,7 @@
-val javaVersion: String by project
-
 plugins {
 	java
-	id("org.springframework.boot")
-	id("io.spring.dependency-management")
+	alias(libs.plugins.springframework.boot)
+	alias(libs.plugins.spring.dependency.management)
   checkstyle
 }
 
@@ -11,7 +9,7 @@ group = "com.example"
 version = "0.0.1-SNAPSHOT"
 
 java {
-  sourceCompatibility = JavaVersion.toVersion(javaVersion)
+  sourceCompatibility = JavaVersion.toVersion(libs.versions.java.get())
 }
 
 repositories {
@@ -29,6 +27,6 @@ tasks.withType<Test> {
 }
 
 checkstyle {
-  toolVersion = "10.3.3"
+  toolVersion = libs.versions.checkstyle.get()
   configFile = rootProject.file("config/checkstyle/checkstyle.xml")
 }

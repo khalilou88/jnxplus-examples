@@ -1,9 +1,6 @@
-val javaVersion: String by project
-val quarkusVersion: String by project
-
 plugins {
     java
-    id("io.quarkus")
+    alias(libs.plugins.quarkus)
 }
 
 repositories {
@@ -12,7 +9,7 @@ repositories {
 }
 
 dependencies {
-    implementation(enforcedPlatform("io.quarkus.platform:quarkus-bom:${quarkusVersion}"))
+    implementation(enforcedPlatform(libs.quarkus.platform.quarkus.bom))
     implementation("io.quarkus:quarkus-resteasy-reactive")
     implementation("io.quarkus:quarkus-resteasy-reactive-jackson")
     implementation("io.quarkus:quarkus-arc")
@@ -25,8 +22,8 @@ group "com.example"
 version "0.0.1-SNAPSHOT"
 
 java {
-    sourceCompatibility = JavaVersion.toVersion(javaVersion)
-    targetCompatibility = JavaVersion.toVersion(javaVersion)
+    sourceCompatibility = JavaVersion.toVersion(libs.versions.java.get())
+    targetCompatibility = JavaVersion.toVersion(libs.versions.java.get())
 }
 
 tasks.withType<Test> {

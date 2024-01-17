@@ -1,0 +1,31 @@
+[versions]
+java = "17"
+checkstyle = "10.3.3"
+kotlin = "1.9.20"
+boot = "3.2.0"
+quarkus = "3.5.3"
+micronaut = "4.2.0"
+
+[libraries]
+quarkus-platform-quarkus-bom = { module = "io.quarkus.platform:quarkus-bom", version.ref = "quarkus" }
+
+[plugins]
+jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+jetbrains-kotlin-plugin-allopen = { id = "org.jetbrains.kotlin.plugin.allopen", version.ref = "kotlin" }
+springframework-boot = { id = "org.springframework.boot", version.ref = "boot" }
+spring-dependency-management = { id = "io.spring.dependency-management", version = "1.1.4" }
+jetbrains-kotlin-plugin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
+jlleitschuh-gradle-ktlint = { id = "org.jlleitschuh.gradle.ktlint", version = "12.0.3" }
+quarkus = { id = "io.quarkus", version.ref = "quarkus" }
+micronaut-application = { id = "io.micronaut.application", version.ref = "micronaut" }
+micronaut-aot = { id = "io.micronaut.aot", version.ref = "micronaut" }
+micronaut-library = { id = "io.micronaut.library", version.ref = "micronaut" }
+google-devtools-ksp = { id = "com.google.devtools.ksp", version = "1.9.20-1.0.14" }
+github-johnrengelman-shadow = { id = "com.github.johnrengelman.shadow", version = "8.1.1" }
+github-khalilou88-jnxplus = { id = "io.github.khalilou88.jnxplus", version = "0.2.2" }
+
+
+
+
+
+

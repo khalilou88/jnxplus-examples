@@ -1,15 +1,12 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
-val javaVersion: String by project
-val kotlinVersion: String by project
-
 plugins {
-    id("org.jetbrains.kotlin.jvm")
-    id("org.jetbrains.kotlin.plugin.allopen")
-    id("com.google.devtools.ksp")
-    id("com.github.johnrengelman.shadow")
-    id("io.micronaut.application")
-    id("io.micronaut.aot")
+    alias(libs.plugins.jetbrains.kotlin.jvm)
+    alias(libs.plugins.jetbrains.kotlin.plugin.allopen)
+    alias(libs.plugins.google.devtools.ksp)
+    alias(libs.plugins.github.johnrengelman.shadow)
+    alias(libs.plugins.micronaut.application)
+    alias(libs.plugins.micronaut.aot)
 }
 
 version = "0.0.1-SNAPSHOT"
@@ -21,15 +18,15 @@ repositories {
 }
 
 dependencies {
-    ksp("io.micronaut.serde:micronaut-serde-processor")
-    implementation("io.micronaut.kotlin:micronaut-kotlin-runtime")
-    implementation("io.micronaut.serde:micronaut-serde-jackson")
-    implementation("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}")
-    runtimeOnly("ch.qos.logback:logback-classic")
-    runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
-    testImplementation("io.micronaut:micronaut-http-client")
-    runtimeOnly("org.yaml:snakeyaml")
+    ksp(mn.micronaut.serde.processor)
+    implementation(mn.micronaut.kotlin.runtime)
+    implementation(mn.micronaut.serde.jackson)
+    implementation(mn.kotlin.reflect)
+    implementation(mn.kotlin.stdlib.jdk8)
+    runtimeOnly(mn.logback.classic)
+    runtimeOnly(mn.jackson.module.kotlin)
+    testImplementation(mn.micronaut.http.client)
+    runtimeOnly(mn.snakeyaml)
     implementation(project(":micronaut:g-m-kt-lib"))
 }
 
@@ -38,7 +35,7 @@ application {
 }
 
 java {
-    sourceCompatibility = JavaVersion.toVersion(javaVersion)
+    sourceCompatibility = JavaVersion.toVersion(libs.versions.java.get())
 }
 
 graalvmNative.toolchainDetection.set(false)

@@ -1,10 +1,7 @@
-val javaVersion: String by project
-val quarkusVersion: String by project
-
 plugins {
-    kotlin("jvm")
-    kotlin("plugin.allopen")
-    id("io.quarkus")
+    alias(libs.plugins.jetbrains.kotlin.jvm)
+    alias(libs.plugins.jetbrains.kotlin.plugin.allopen)
+    alias(libs.plugins.quarkus)
 }
 
 repositories {
@@ -13,7 +10,7 @@ repositories {
 }
 
 dependencies {
-    implementation(enforcedPlatform("io.quarkus.platform:quarkus-bom:${quarkusVersion}"))
+    implementation(enforcedPlatform(libs.quarkus.platform.quarkus.bom))
     implementation("io.quarkus:quarkus-kotlin")
     implementation("io.quarkus:quarkus-arc")
     testImplementation("io.quarkus:quarkus-junit5")
@@ -23,8 +20,8 @@ group = "com.example"
 version = "0.0.1-SNAPSHOT"
 
 java {
-    sourceCompatibility = JavaVersion.toVersion(javaVersion)
-    targetCompatibility = JavaVersion.toVersion(javaVersion)
+    sourceCompatibility = JavaVersion.toVersion(libs.versions.java.get())
+    targetCompatibility = JavaVersion.toVersion(libs.versions.java.get())
 }
 
 tasks.withType<Test> {
@@ -37,7 +34,7 @@ allOpen {
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-    kotlinOptions.jvmTarget = javaVersion
+    kotlinOptions.jvmTarget = libs.versions.java.get()
     kotlinOptions.javaParameters = true
 }
 
