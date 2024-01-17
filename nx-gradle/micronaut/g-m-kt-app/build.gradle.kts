@@ -38,7 +38,7 @@ application {
 }
 
 java {
-    sourceCompatibility = JavaVersion.toVersion(javaVersion)
+    sourceCompatibility = libs.versions.java.get()
 }
 
 graalvmNative.toolchainDetection.set(false)

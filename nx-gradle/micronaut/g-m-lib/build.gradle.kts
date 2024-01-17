@@ -17,6 +17,6 @@ dependencies {
 }
 
 java {
-    sourceCompatibility = JavaVersion.toVersion(javaVersion)
-    targetCompatibility = JavaVersion.toVersion(javaVersion)
+    sourceCompatibility = libs.versions.java.get()
+    targetCompatibility = libs.versions.java.get()
 }
