@@ -1,10 +1,7 @@
-
-
-
 plugins {
     alias(libs.plugins.jetbrains.kotlin.jvm)
     alias(libs.plugins.jetbrains.kotlin.plugin.allopen)
-    alias(libs.plugins.io.quarkus)
+    alias(libs.plugins.quarkus)
 }
 
 repositories {
@@ -13,7 +10,7 @@ repositories {
 }
 
 dependencies {
-    implementation(enforcedPlatform(libs.io.quarkus.platform.quarkus.bom))
+    implementation(enforcedPlatform(libs.quarkus.platform.quarkus.bom))
     implementation("io.quarkus:quarkus-kotlin")
     implementation("io.quarkus:quarkus-arc")
     implementation("io.quarkus:quarkus-resteasy-reactive")

@@ -12,7 +12,7 @@ plugins {
   alias(libs.plugins.spring.dependency.management) apply false
   alias(libs.plugins.jetbrains.kotlin.plugin.spring) apply false
   // quarkus
-  alias(libs.plugins.io.quarkus) apply false
+  alias(libs.plugins.quarkus) apply false
   // micronaut
   alias(libs.plugins.io.micronaut.application) apply false
   alias(libs.plugins.io.micronaut.library) apply false
