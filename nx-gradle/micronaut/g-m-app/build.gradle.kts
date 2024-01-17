@@ -17,7 +17,7 @@ dependencies {
     annotationProcessor(mn.micronaut.serde.processor)
     implementation(mn.micronaut.serde.jackson)
     runtimeOnly(libs.ch.qos.logback.logback.classic)
-    testImplementation(libs.io.micronaut.micronaut.http.client)
+    testImplementation(mn.micronaut.http.client)
     implementation(project(":micronaut:g-m-lib"))
 }
 

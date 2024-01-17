@@ -21,14 +21,14 @@ repositories {
 }
 
 dependencies {
-    ksp("io.micronaut.serde:micronaut-serde-processor")
-    implementation("io.micronaut.kotlin:micronaut-kotlin-runtime")
-    implementation("io.micronaut.serde:micronaut-serde-jackson")
+    ksp(mn.micronaut.serde.processor)
+    implementation(mn.micronaut.kotlin.runtime)
+    implementation(mn.micronaut.serde.jackson)
     implementation(libs.org.jetbrains.kotlin.kotlin.reflect)
     implementation(libs.org.jetbrains.kotlin.kotlin.stdlib.jdk8)
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
-    testImplementation("io.micronaut:micronaut-http-client")
+    testImplementation(mn.micronaut.http.client)
     runtimeOnly("org.yaml:snakeyaml")
     implementation(project(":micronaut:g-m-kt-lib"))
 }

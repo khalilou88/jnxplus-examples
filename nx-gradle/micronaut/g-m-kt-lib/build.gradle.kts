@@ -19,10 +19,10 @@ repositories {
 }
 
 dependencies {
-    implementation("io.micronaut.kotlin:micronaut-kotlin-runtime")
+    implementation(mn.micronaut.kotlin.runtime)
     implementation(libs.org.jetbrains.kotlin.kotlin.reflect)
     implementation(libs.org.jetbrains.kotlin.kotlin.stdlib.jdk8)
-    testImplementation("io.micronaut.test:micronaut-test-junit5")
+    testImplementation(mn.micronaut.test.junit5)
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 }
 

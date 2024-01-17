@@ -11,6 +11,4 @@ plugins {
   alias(libs.plugins.io.micronaut.library) apply false
   alias(libs.plugins.io.micronaut.aot) apply false
   alias(libs.plugins.com.google.devtools.ksp) apply false
-  alias(libs.plugins.com.github.ben.manes.versions)
-  alias(libs.plugins.nl.littlerobots.version.catalog.update)
 }
