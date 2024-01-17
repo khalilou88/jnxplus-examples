@@ -1,9 +1,7 @@
-
-
 plugins {
 	java
-	alias(libs.plugins.org.springframework.boot)
-	alias(libs.plugins.io.spring.dependency.management)
+	alias(libs.plugins.springframework.boot)
+	alias(libs.plugins.spring.dependency.management)
   checkstyle
 }
 
@@ -29,6 +27,6 @@ tasks.withType<Test> {
 }
 
 checkstyle {
-  toolVersion = "10.3.3"
+  toolVersion = libs.versions.checkstyle.get()
   configFile = rootProject.file("config/checkstyle/checkstyle.xml")
 }

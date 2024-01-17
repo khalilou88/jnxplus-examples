@@ -2,8 +2,8 @@
 
 
 plugins {
-    alias(libs.plugins.org.jetbrains.kotlin.jvm)
-    alias(libs.plugins.org.jetbrains.kotlin.plugin.allopen)
+    alias(libs.plugins.jetbrains.kotlin.jvm)
+    alias(libs.plugins.jetbrains.kotlin.plugin.allopen)
     alias(libs.plugins.io.quarkus)
 }
 

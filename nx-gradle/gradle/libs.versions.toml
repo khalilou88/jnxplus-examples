@@ -1,13 +1,15 @@
 [versions]
 java = "17"
+checkstyle = "10.3.3"
 kotlin = "1.9.20"
+boot = "3.2.0"
 micronaut = "4.2.0"
 com-google-devtools-ksp = "1.9.20-1.0.14"
 com-pinterest-ktlint = "1.0.1"
 io-quarkus = "3.5.3"
 org-jetbrains-kotlin = "1.9.20"
 org-junit-jupiter = "5.10.1"
-org-springframework-boot = "3.2.0"
+
 
 [libraries]
 ch-qos-logback-logback-classic = "ch.qos.logback:logback-classic:1.4.11"
@@ -54,22 +56,21 @@ org-jetbrains-kotlin-kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-std
 org-jetbrains-kotlin-kotlin-stdlib-jdk8 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "org-jetbrains-kotlin" }
 org-junit-jupiter-junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "org-junit-jupiter" }
 org-junit-jupiter-junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "org-junit-jupiter" }
-org-springframework-boot-spring-boot-starter = { module = "org.springframework.boot:spring-boot-starter", version.ref = "org-springframework-boot" }
-org-springframework-boot-spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "org-springframework-boot" }
-org-springframework-boot-spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "org-springframework-boot" }
 org-yaml-snakeyaml = "org.yaml:snakeyaml:2.0"
 
 [plugins]
+jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+jetbrains-kotlin-plugin-allopen = { id = "org.jetbrains.kotlin.plugin.allopen", version.ref = "kotlin" }
+springframework-boot = { id = "org.springframework.boot", version.ref = "boot" }
+spring-dependency-management = { id = "io.spring.dependency-management", version = "1.1.4" }
+jetbrains-kotlin-plugin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
+jlleitschuh-gradle-ktlint = { id = "org.jlleitschuh.gradle.ktlint", version = "12.0.3"}
+github-khalilou88-jnxplus = { id = "io.github.khalilou88.jnxplus", version = "0.2.2" }
 com-github-johnrengelman-shadow = "com.github.johnrengelman.shadow:8.1.1"
 com-google-devtools-ksp = "com.google.devtools.ksp:1.9.20-1.0.14"
-io-github-khalilou88-jnxplus = "io.github.khalilou88.jnxplus:0.2.2"
 io-micronaut-aot = "io.micronaut.aot:4.2.0"
 io-micronaut-application = "io.micronaut.application:4.2.0"
 io-micronaut-library = "io.micronaut.library:4.2.0"
 io-quarkus = "io.quarkus:3.5.3"
-org-jetbrains-kotlin-jvm = "org.jetbrains.kotlin.jvm:1.9.20"
-org-jetbrains-kotlin-plugin-allopen = "org.jetbrains.kotlin.plugin.allopen:1.9.20"
-org-jlleitschuh-gradle-ktlint = "org.jlleitschuh.gradle.ktlint:12.0.3"
-org-springframework-boot = "org.springframework.boot:3.2.0"
-org-jetbrains-kotlin-plugin-spring = "org.jetbrains.kotlin.plugin.spring:1.9.20"
-io-spring-dependency-management = { id = "io.spring.dependency-management", version = "1.1.4" }
+
+

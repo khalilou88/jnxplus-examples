@@ -1,13 +1,11 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-
-
 plugins {
-  alias(libs.plugins.org.springframework.boot)
-  alias(libs.plugins.io.spring.dependency.management)
-  alias(libs.plugins.org.jetbrains.kotlin.jvm)
-  alias(libs.plugins.org.jetbrains.kotlin.plugin.spring)
-  alias(libs.plugins.org.jlleitschuh.gradle.ktlint)
+  alias(libs.plugins.springframework.boot)
+  alias(libs.plugins.spring.dependency.management)
+  alias(libs.plugins.jetbrains.kotlin.jvm)
+  alias(libs.plugins.jetbrains.kotlin.plugin.spring)
+  alias(libs.plugins.jlleitschuh.gradle.ktlint)
 }
 
 group = "com.example"
