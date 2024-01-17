@@ -1,15 +1,12 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
-
-
-
 plugins {
     alias(libs.plugins.jetbrains.kotlin.jvm)
     alias(libs.plugins.jetbrains.kotlin.plugin.allopen)
-    alias(libs.plugins.com.google.devtools.ksp)
-    alias(libs.plugins.com.github.johnrengelman.shadow)
-    alias(libs.plugins.io.micronaut.application)
-    alias(libs.plugins.io.micronaut.aot)
+    alias(libs.plugins.google.devtools.ksp)
+    alias(libs.plugins.github.johnrengelman.shadow)
+    alias(libs.plugins.micronaut.application)
+    alias(libs.plugins.micronaut.aot)
 }
 
 version = "0.0.1-SNAPSHOT"
@@ -24,12 +21,12 @@ dependencies {
     ksp(mn.micronaut.serde.processor)
     implementation(mn.micronaut.kotlin.runtime)
     implementation(mn.micronaut.serde.jackson)
-    implementation(libs.org.jetbrains.kotlin.kotlin.reflect)
-    implementation(libs.org.jetbrains.kotlin.kotlin.stdlib.jdk8)
-    runtimeOnly("ch.qos.logback:logback-classic")
-    runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
+    implementation(mn.kotlin.reflect)
+    implementation(mn.kotlin.stdlib.jdk8)
+    runtimeOnly(mn.logback.classic)
+    runtimeOnly(mn.jackson.module.kotlin)
     testImplementation(mn.micronaut.http.client)
-    runtimeOnly("org.yaml:snakeyaml")
+    runtimeOnly(mn.snakeyaml)
     implementation(project(":micronaut:g-m-kt-lib"))
 }
 

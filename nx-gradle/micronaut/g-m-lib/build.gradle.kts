@@ -1,7 +1,5 @@
-
-
 plugins {
-    alias(libs.plugins.io.micronaut.library)
+    alias(libs.plugins.micronaut.library)
 }
 
 version = "0.0.1-SNAPSHOT"

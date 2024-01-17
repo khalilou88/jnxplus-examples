@@ -5,35 +5,9 @@ kotlin = "1.9.20"
 boot = "3.2.0"
 quarkus = "3.5.3"
 micronaut = "4.2.0"
-com-google-devtools-ksp = "1.9.20-1.0.14"
-org-jetbrains-kotlin = "1.9.20"
-org-junit-jupiter = "5.10.1"
-
 
 [libraries]
 quarkus-platform-quarkus-bom = { module = "io.quarkus.platform:quarkus-bom", version.ref = "quarkus" }
-
-ch-qos-logback-logback-classic = "ch.qos.logback:logback-classic:1.4.11"
-com-fasterxml-jackson-module-jackson-module-kotlin = "com.fasterxml.jackson.module:jackson-module-kotlin:2.15.3"
-com-google-devtools-ksp-symbol-processing = { module = "com.google.devtools.ksp:symbol-processing", version.ref = "com-google-devtools-ksp" }
-com-google-devtools-ksp-symbol-processing-api = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "com-google-devtools-ksp" }
-com-google-devtools-ksp-symbol-processing-cmdline = { module = "com.google.devtools.ksp:symbol-processing-cmdline", version.ref = "com-google-devtools-ksp" }
-com-puppycrawl-tools-checkstyle = "com.puppycrawl.tools:checkstyle:10.3.3"
-io-github-detekt-sarif4k = "io.github.detekt.sarif4k:sarif4k:0.5.0"
-io-github-oshai-kotlin-logging = "io.github.oshai:kotlin-logging:5.1.0"
-io-rest-assured = "io.rest-assured:rest-assured:5.3.0"
-org-apache-logging-log4j-log4j-core = "org.apache.logging.log4j:log4j-core:2.17.1"
-org-graalvm-buildtools-junit-platform-native = "org.graalvm.buildtools:junit-platform-native:0.9.28"
-org-jetbrains-annotations = "org.jetbrains:annotations:13.0"
-org-jetbrains-kotlin-kotlin-build-tools-impl = { module = "org.jetbrains.kotlin:kotlin-build-tools-impl", version.ref = "org-jetbrains-kotlin" }
-org-jetbrains-kotlin-kotlin-compiler-embeddable = { module = "org.jetbrains.kotlin:kotlin-compiler-embeddable", version.ref = "org-jetbrains-kotlin" }
-org-jetbrains-kotlin-kotlin-klib-commonizer-embeddable = { module = "org.jetbrains.kotlin:kotlin-klib-commonizer-embeddable", version.ref = "org-jetbrains-kotlin" }
-org-jetbrains-kotlin-kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "org-jetbrains-kotlin" }
-org-jetbrains-kotlin-kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "org-jetbrains-kotlin" }
-org-jetbrains-kotlin-kotlin-stdlib-jdk8 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "org-jetbrains-kotlin" }
-org-junit-jupiter-junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "org-junit-jupiter" }
-org-junit-jupiter-junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "org-junit-jupiter" }
-org-yaml-snakeyaml = "org.yaml:snakeyaml:2.0"
 
 [plugins]
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
@@ -41,14 +15,17 @@ jetbrains-kotlin-plugin-allopen = { id = "org.jetbrains.kotlin.plugin.allopen", 
 springframework-boot = { id = "org.springframework.boot", version.ref = "boot" }
 spring-dependency-management = { id = "io.spring.dependency-management", version = "1.1.4" }
 jetbrains-kotlin-plugin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
-jlleitschuh-gradle-ktlint = { id = "org.jlleitschuh.gradle.ktlint", version = "12.0.3"}
+jlleitschuh-gradle-ktlint = { id = "org.jlleitschuh.gradle.ktlint", version = "12.0.3" }
 quarkus = { id = "io.quarkus", version.ref = "quarkus" }
+micronaut-application = { id = "io.micronaut.application", version.ref = "micronaut" }
+micronaut-aot = { id = "io.micronaut.aot", version.ref = "micronaut" }
+micronaut-library = { id = "io.micronaut.library", version.ref = "micronaut" }
+google-devtools-ksp = { id = "com.google.devtools.ksp", version = "1.9.20-1.0.14" }
+github-johnrengelman-shadow = { id = "com.github.johnrengelman.shadow", version = "8.1.1" }
 github-khalilou88-jnxplus = { id = "io.github.khalilou88.jnxplus", version = "0.2.2" }
-com-github-johnrengelman-shadow = "com.github.johnrengelman.shadow:8.1.1"
-com-google-devtools-ksp = "com.google.devtools.ksp:1.9.20-1.0.14"
-io-micronaut-aot = "io.micronaut.aot:4.2.0"
-io-micronaut-application = "io.micronaut.application:4.2.0"
-io-micronaut-library = "io.micronaut.library:4.2.0"
+
+
+
 
 
 

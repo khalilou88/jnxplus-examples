@@ -14,9 +14,9 @@ plugins {
   // quarkus
   alias(libs.plugins.quarkus) apply false
   // micronaut
-  alias(libs.plugins.io.micronaut.application) apply false
-  alias(libs.plugins.io.micronaut.library) apply false
-  alias(libs.plugins.io.micronaut.aot) apply false
-  alias(libs.plugins.com.google.devtools.ksp) apply false
-  alias(libs.plugins.com.github.johnrengelman.shadow) apply false
+  alias(libs.plugins.micronaut.application) apply false
+  alias(libs.plugins.micronaut.library) apply false
+  alias(libs.plugins.micronaut.aot) apply false
+  alias(libs.plugins.google.devtools.ksp) apply false
+  alias(libs.plugins.github.johnrengelman.shadow) apply false
 }

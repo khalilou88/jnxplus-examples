@@ -1,9 +1,7 @@
-
-
 plugins {
-    alias(libs.plugins.com.github.johnrengelman.shadow)
-    alias(libs.plugins.io.micronaut.application)
-    alias(libs.plugins.io.micronaut.aot)
+    alias(libs.plugins.github.johnrengelman.shadow)
+    alias(libs.plugins.micronaut.application)
+    alias(libs.plugins.micronaut.aot)
 }
 
 version = "0.0.1-SNAPSHOT"
@@ -16,7 +14,7 @@ repositories {
 dependencies {
     annotationProcessor(mn.micronaut.serde.processor)
     implementation(mn.micronaut.serde.jackson)
-    runtimeOnly(libs.ch.qos.logback.logback.classic)
+    runtimeOnly(mn.logback.classic)
     testImplementation(mn.micronaut.http.client)
     implementation(project(":micronaut:g-m-lib"))
 }
