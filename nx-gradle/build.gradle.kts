@@ -1,11 +1,13 @@
 plugins {
-  id("io.github.khalilou88.jnxplus")
-  id("org.springframework.boot") apply false
-  id("io.quarkus") apply false
-  kotlin("jvm") apply false
-  kotlin("plugin.allopen") apply false
-  id("com.github.johnrengelman.shadow") apply false
-  id("io.micronaut.application") apply false
-  id("io.micronaut.aot") apply false
-  id("com.google.devtools.ksp") apply false
+  alias(libs.plugins.io.github.khalilou88.jnxplus)
+  alias(libs.plugins.org.springframework.boot) apply false
+  alias(libs.plugins.io.quarkus) apply false
+  alias(libs.plugins.org.jetbrains.kotlin.jvm) apply false
+  alias(libs.plugins.org.jetbrains.kotlin.plugin.allopen) apply false
+  alias(libs.plugins.com.github.johnrengelman.shadow) apply false
+  alias(libs.plugins.io.micronaut.application) apply false
+  alias(libs.plugins.io.micronaut.aot) apply false
+  alias(libs.plugins.com.google.devtools.ksp) apply false
+  alias(libs.plugins.com.github.ben-manes.versions) version "0.50.0"
+  alias(libs.plugins.nl.littlerobots.version-catalog-update) version "0.8.3"
 }

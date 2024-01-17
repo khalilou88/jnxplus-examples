@@ -3,18 +3,18 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 val javaVersion: String by project
 
 plugins {
-  id("org.springframework.boot") apply false
-  id("io.spring.dependency-management")
-  kotlin("jvm")
-  kotlin("plugin.spring")
-  id("org.jlleitschuh.gradle.ktlint") version "12.0.3"
+  alias(libs.plugins.org.springframework.boot) apply false
+  alias(libs.plugins.io.spring.dependency-management)
+  alias(libs.plugins.org.jetbrains.kotlin.jvm)
+  alias(libs.plugins.org.jetbrains.kotlin.plugin.spring)
+  alias(libs.plugins.org.jlleitschuh.gradle.ktlint)
 }
 
 group = "com.example"
 version = "0.0.1-SNAPSHOT"
 
 java {
-  sourceCompatibility = JavaVersion.toVersion(javaVersion)
+  sourceCompatibility = libs.versions.java.get()
 }
 
 repositories {

@@ -1,9 +1,9 @@
 val javaVersion: String by project
 
 plugins {
-    id("com.github.johnrengelman.shadow")
-    id("io.micronaut.application")
-    id("io.micronaut.aot")
+    alias(libs.plugins.com.github.johnrengelman.shadow)
+    alias(libs.plugins.io.micronaut.application)
+    alias(libs.plugins.io.micronaut.aot)
 }
 
 version = "0.0.1-SNAPSHOT"
@@ -27,8 +27,8 @@ application {
 }
 
 java {
-    sourceCompatibility = JavaVersion.toVersion(javaVersion)
-    targetCompatibility = JavaVersion.toVersion(javaVersion)
+    sourceCompatibility = libs.versions.java.get()
+    targetCompatibility = libs.versions.java.get()
 }
 
 graalvmNative.toolchainDetection.set(false)

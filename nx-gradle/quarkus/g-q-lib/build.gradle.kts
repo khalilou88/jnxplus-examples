@@ -3,7 +3,7 @@ val quarkusVersion: String by project
 
 plugins {
     java
-    id("io.quarkus")
+    alias(libs.plugins.io.quarkus)
 }
 
 repositories {
@@ -21,8 +21,8 @@ group "com.example"
 version "0.0.1-SNAPSHOT"
 
 java {
-    sourceCompatibility = JavaVersion.toVersion(javaVersion)
-    targetCompatibility = JavaVersion.toVersion(javaVersion)
+    sourceCompatibility = libs.versions.java.get()
+    targetCompatibility = libs.versions.java.get()
 }
 
 tasks.withType<Test> {

@@ -4,12 +4,12 @@ val javaVersion: String by project
 val kotlinVersion: String by project
 
 plugins {
-    id("org.jetbrains.kotlin.jvm")
-    id("org.jetbrains.kotlin.plugin.allopen")
-    id("com.google.devtools.ksp")
-    id("com.github.johnrengelman.shadow")
-    id("io.micronaut.application")
-    id("io.micronaut.aot")
+    alias(libs.plugins.org.jetbrains.kotlin.jvm)
+    alias(libs.plugins.org.jetbrains.kotlin.plugin.allopen)
+    alias(libs.plugins.com.google.devtools.ksp)
+    alias(libs.plugins.com.github.johnrengelman.shadow)
+    alias(libs.plugins.io.micronaut.application)
+    alias(libs.plugins.io.micronaut.aot)
 }
 
 version = "0.0.1-SNAPSHOT"
@@ -38,7 +38,7 @@ application {
 }
 
 java {
-    sourceCompatibility = JavaVersion.toVersion(javaVersion)
+    sourceCompatibility = libs.versions.java.get()
 }
 
 graalvmNative.toolchainDetection.set(false)

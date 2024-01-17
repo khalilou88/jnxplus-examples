@@ -4,9 +4,9 @@ val javaVersion: String by project
 val kotlinVersion: String by project
 
 plugins {
-    id("org.jetbrains.kotlin.jvm")
-    id("com.google.devtools.ksp")
-    id("io.micronaut.library")
+    alias(libs.plugins.org.jetbrains.kotlin.jvm)
+    alias(libs.plugins.com.google.devtools.ksp)
+    alias(libs.plugins.io.micronaut.library)
 }
 
 version = "0.0.1-SNAPSHOT"
@@ -26,5 +26,5 @@ dependencies {
 }
 
 java {
-    sourceCompatibility = JavaVersion.toVersion(javaVersion)
+    sourceCompatibility = libs.versions.java.get()
 }

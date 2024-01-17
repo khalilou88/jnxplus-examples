@@ -2,8 +2,8 @@ val javaVersion: String by project
 
 plugins {
 	java
-	id("org.springframework.boot")
-	id("io.spring.dependency-management")
+	alias(libs.plugins.org.springframework.boot)
+	alias(libs.plugins.io.spring.dependency-management)
   checkstyle
 }
 
@@ -11,7 +11,7 @@ group = "com.example"
 version = "0.0.1-SNAPSHOT"
 
 java {
-  sourceCompatibility = JavaVersion.toVersion(javaVersion)
+  sourceCompatibility = libs.versions.java.get()
 }
 
 repositories {

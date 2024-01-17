@@ -1,7 +1,7 @@
 val javaVersion: String by project
 
 plugins {
-    id("io.micronaut.library")
+    alias(libs.plugins.io.micronaut.library)
 }
 
 version = "0.0.1-SNAPSHOT"
@@ -17,6 +17,6 @@ dependencies {
 }
 
 java {
-    sourceCompatibility = JavaVersion.toVersion(javaVersion)
-    targetCompatibility = JavaVersion.toVersion(javaVersion)
+    sourceCompatibility = libs.versions.java.get()
+    targetCompatibility = libs.versions.java.get()
 }

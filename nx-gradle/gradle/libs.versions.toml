@@ -1,0 +1,91 @@
+[versions]
+java = "17"
+kotlin = "1.9.20"
+com-google-devtools-ksp = "1.9.20-1.0.14"
+com-pinterest-ktlint = "1.0.1"
+io-micronaut = "4.2.0"
+io-micronaut-aot = "2.1.1"
+io-micronaut-serde = "2.4.0"
+io-quarkus = "3.5.3"
+org-jetbrains-kotlin = "1.9.20"
+org-junit-jupiter = "5.10.1"
+org-springframework-boot = "3.2.0"
+
+[libraries]
+ch-qos-logback-logback-classic = "ch.qos.logback:logback-classic:1.4.11"
+com-fasterxml-jackson-module-jackson-module-kotlin = "com.fasterxml.jackson.module:jackson-module-kotlin:2.15.3"
+com-google-devtools-ksp-symbol-processing = { module = "com.google.devtools.ksp:symbol-processing", version.ref = "com-google-devtools-ksp" }
+com-google-devtools-ksp-symbol-processing-api = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "com-google-devtools-ksp" }
+com-google-devtools-ksp-symbol-processing-cmdline = { module = "com.google.devtools.ksp:symbol-processing-cmdline", version.ref = "com-google-devtools-ksp" }
+com-pinterest-ktlint-ktlint-cli = { module = "com.pinterest.ktlint:ktlint-cli", version.ref = "com-pinterest-ktlint" }
+com-pinterest-ktlint-ktlint-cli-reporter-baseline = { module = "com.pinterest.ktlint:ktlint-cli-reporter-baseline", version.ref = "com-pinterest-ktlint" }
+com-pinterest-ktlint-ktlint-ruleset-standard = { module = "com.pinterest.ktlint:ktlint-ruleset-standard", version.ref = "com-pinterest-ktlint" }
+com-puppycrawl-tools-checkstyle = "com.puppycrawl.tools:checkstyle:10.3.3"
+io-github-detekt-sarif4k = "io.github.detekt.sarif4k:sarif4k:0.5.0"
+io-github-oshai-kotlin-logging = "io.github.oshai:kotlin-logging:5.1.0"
+io-micronaut-aot-micronaut-aot-api = { module = "io.micronaut.aot:micronaut-aot-api", version.ref = "io-micronaut-aot" }
+io-micronaut-aot-micronaut-aot-cli = { module = "io.micronaut.aot:micronaut-aot-cli", version.ref = "io-micronaut-aot" }
+io-micronaut-aot-micronaut-aot-std-optimizers = { module = "io.micronaut.aot:micronaut-aot-std-optimizers", version.ref = "io-micronaut-aot" }
+io-micronaut-kotlin-micronaut-kotlin-runtime = "io.micronaut.kotlin:micronaut-kotlin-runtime:4.1.0"
+io-micronaut-micronaut-graal = { module = "io.micronaut:micronaut-graal", version.ref = "io-micronaut" }
+io-micronaut-micronaut-http-client = { module = "io.micronaut:micronaut-http-client", version.ref = "io-micronaut" }
+io-micronaut-micronaut-http-server-netty = { module = "io.micronaut:micronaut-http-server-netty", version.ref = "io-micronaut" }
+io-micronaut-micronaut-inject = { module = "io.micronaut:micronaut-inject", version.ref = "io-micronaut" }
+io-micronaut-micronaut-inject-java = { module = "io.micronaut:micronaut-inject-java", version.ref = "io-micronaut" }
+io-micronaut-micronaut-inject-kotlin = { module = "io.micronaut:micronaut-inject-kotlin", version.ref = "io-micronaut" }
+io-micronaut-platform-micronaut-platform = "io.micronaut.platform:micronaut-platform:4.2.0"
+io-micronaut-serde-micronaut-serde-jackson = { module = "io.micronaut.serde:micronaut-serde-jackson", version.ref = "io-micronaut-serde" }
+io-micronaut-serde-micronaut-serde-processor = { module = "io.micronaut.serde:micronaut-serde-processor", version.ref = "io-micronaut-serde" }
+io-micronaut-test-micronaut-test-junit5 = "io.micronaut.test:micronaut-test-junit5:4.1.0"
+io-quarkus-platform-quarkus-bom = "io.quarkus.platform:quarkus-bom:3.5.3"
+io-quarkus-quarkus-arc = { module = "io.quarkus:quarkus-arc", version.ref = "io-quarkus" }
+io-quarkus-quarkus-arc-deployment = { module = "io.quarkus:quarkus-arc-deployment", version.ref = "io-quarkus" }
+io-quarkus-quarkus-config-yaml = { module = "io.quarkus:quarkus-config-yaml", version.ref = "io-quarkus" }
+io-quarkus-quarkus-config-yaml-deployment = { module = "io.quarkus:quarkus-config-yaml-deployment", version.ref = "io-quarkus" }
+io-quarkus-quarkus-core-deployment = { module = "io.quarkus:quarkus-core-deployment", version.ref = "io-quarkus" }
+io-quarkus-quarkus-jsonp-deployment = { module = "io.quarkus:quarkus-jsonp-deployment", version.ref = "io-quarkus" }
+io-quarkus-quarkus-junit5 = { module = "io.quarkus:quarkus-junit5", version.ref = "io-quarkus" }
+io-quarkus-quarkus-kotlin = { module = "io.quarkus:quarkus-kotlin", version.ref = "io-quarkus" }
+io-quarkus-quarkus-kotlin-deployment = { module = "io.quarkus:quarkus-kotlin-deployment", version.ref = "io-quarkus" }
+io-quarkus-quarkus-mutiny-deployment = { module = "io.quarkus:quarkus-mutiny-deployment", version.ref = "io-quarkus" }
+io-quarkus-quarkus-netty-deployment = { module = "io.quarkus:quarkus-netty-deployment", version.ref = "io-quarkus" }
+io-quarkus-quarkus-resteasy-reactive = { module = "io.quarkus:quarkus-resteasy-reactive", version.ref = "io-quarkus" }
+io-quarkus-quarkus-resteasy-reactive-common-deployment = { module = "io.quarkus:quarkus-resteasy-reactive-common-deployment", version.ref = "io-quarkus" }
+io-quarkus-quarkus-resteasy-reactive-deployment = { module = "io.quarkus:quarkus-resteasy-reactive-deployment", version.ref = "io-quarkus" }
+io-quarkus-quarkus-resteasy-reactive-jackson = { module = "io.quarkus:quarkus-resteasy-reactive-jackson", version.ref = "io-quarkus" }
+io-quarkus-quarkus-resteasy-reactive-jackson-deployment = { module = "io.quarkus:quarkus-resteasy-reactive-jackson-deployment", version.ref = "io-quarkus" }
+io-quarkus-quarkus-resteasy-reactive-kotlin-deployment = { module = "io.quarkus:quarkus-resteasy-reactive-kotlin-deployment", version.ref = "io-quarkus" }
+io-quarkus-quarkus-smallrye-context-propagation-deployment = { module = "io.quarkus:quarkus-smallrye-context-propagation-deployment", version.ref = "io-quarkus" }
+io-quarkus-quarkus-vertx-deployment = { module = "io.quarkus:quarkus-vertx-deployment", version.ref = "io-quarkus" }
+io-quarkus-quarkus-virtual-threads-deployment = { module = "io.quarkus:quarkus-virtual-threads-deployment", version.ref = "io-quarkus" }
+io-rest-assured = "io.rest-assured:rest-assured:5.3.0"
+org-apache-logging-log4j-log4j-core = "org.apache.logging.log4j:log4j-core:2.17.1"
+org-graalvm-buildtools-junit-platform-native = "org.graalvm.buildtools:junit-platform-native:0.9.28"
+org-jetbrains-annotations = "org.jetbrains:annotations:13.0"
+org-jetbrains-kotlin-kotlin-build-tools-impl = { module = "org.jetbrains.kotlin:kotlin-build-tools-impl", version.ref = "org-jetbrains-kotlin" }
+org-jetbrains-kotlin-kotlin-compiler-embeddable = { module = "org.jetbrains.kotlin:kotlin-compiler-embeddable", version.ref = "org-jetbrains-kotlin" }
+org-jetbrains-kotlin-kotlin-klib-commonizer-embeddable = { module = "org.jetbrains.kotlin:kotlin-klib-commonizer-embeddable", version.ref = "org-jetbrains-kotlin" }
+org-jetbrains-kotlin-kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "org-jetbrains-kotlin" }
+org-jetbrains-kotlin-kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "org-jetbrains-kotlin" }
+org-jetbrains-kotlin-kotlin-stdlib-jdk8 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "org-jetbrains-kotlin" }
+org-junit-jupiter-junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "org-junit-jupiter" }
+org-junit-jupiter-junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "org-junit-jupiter" }
+org-springframework-boot-spring-boot-starter = { module = "org.springframework.boot:spring-boot-starter", version.ref = "org-springframework-boot" }
+org-springframework-boot-spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "org-springframework-boot" }
+org-springframework-boot-spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "org-springframework-boot" }
+org-yaml-snakeyaml = "org.yaml:snakeyaml:2.0"
+
+[plugins]
+com-github-ben-manes-versions = "com.github.ben-manes.versions:0.50.0"
+com-github-johnrengelman-shadow = "com.github.johnrengelman.shadow:8.1.1"
+com-google-devtools-ksp = "com.google.devtools.ksp:1.9.20-1.0.14"
+io-github-khalilou88-jnxplus = "io.github.khalilou88.jnxplus:0.2.2"
+io-micronaut-aot = "io.micronaut.aot:4.2.0"
+io-micronaut-application = "io.micronaut.application:4.2.0"
+io-quarkus = "io.quarkus:3.5.3"
+nl-littlerobots-version-catalog-update = "nl.littlerobots.version-catalog-update:0.8.3"
+org-jetbrains-kotlin-jvm = "org.jetbrains.kotlin.jvm:1.9.20"
+org-jetbrains-kotlin-plugin-allopen = "org.jetbrains.kotlin.plugin.allopen:1.9.20"
+org-jlleitschuh-gradle-ktlint = "org.jlleitschuh.gradle.ktlint:12.0.3"
+org-springframework-boot = "org.springframework.boot:3.2.0"
+org-jetbrains-kotlin-plugin-spring = "org.jetbrains.kotlin.plugin.spring:1.9.20"
