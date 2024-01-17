@@ -14,10 +14,10 @@ repositories {
 }
 
 dependencies {
-    annotationProcessor("io.micronaut.serde:micronaut-serde-processor")
-    implementation("io.micronaut.serde:micronaut-serde-jackson")
-    runtimeOnly("ch.qos.logback:logback-classic")
-    testImplementation("io.micronaut:micronaut-http-client")
+    annotationProcessor(mn.micronaut.serde.processor)
+    implementation(mn.micronaut.serde.jackson)
+    runtimeOnly(libs.ch.qos.logback.logback.classic)
+    testImplementation(libs.io.micronaut.micronaut.http.client)
     implementation(project(":micronaut:g-m-lib"))
 }
 

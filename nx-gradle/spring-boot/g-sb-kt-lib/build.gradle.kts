@@ -4,7 +4,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
   alias(libs.plugins.org.springframework.boot) apply false
-  alias(libs.plugins.io.spring.dependency-management)
+  alias(libs.plugins.io.spring.dependency.management)
   alias(libs.plugins.org.jetbrains.kotlin.jvm)
   alias(libs.plugins.org.jetbrains.kotlin.plugin.spring)
   alias(libs.plugins.org.jlleitschuh.gradle.ktlint)
@@ -37,7 +37,7 @@ dependencies {
 tasks.withType<KotlinCompile> {
   kotlinOptions {
     freeCompilerArgs += "-Xjsr305=strict"
-    jvmTarget = javaVersion
+    jvmTarget = libs.versions.java.get()
   }
 }
 

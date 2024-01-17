@@ -3,7 +3,7 @@
 plugins {
 	java
 	alias(libs.plugins.org.springframework.boot)
-	alias(libs.plugins.io.spring.dependency-management)
+	alias(libs.plugins.io.spring.dependency.management)
   checkstyle
 }
 

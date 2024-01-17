@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-    implementation(enforcedPlatform("io.quarkus.platform:quarkus-bom:${quarkusVersion}"))
+    implementation(enforcedPlatform(libs.io.quarkus.platform.quarkus.bom))
     implementation("io.quarkus:quarkus-kotlin")
     implementation("io.quarkus:quarkus-arc")
     testImplementation("io.quarkus:quarkus-junit5")
@@ -37,7 +37,7 @@ allOpen {
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-    kotlinOptions.jvmTarget = javaVersion
+    kotlinOptions.jvmTarget = libs.versions.java.get()
     kotlinOptions.javaParameters = true
 }
 

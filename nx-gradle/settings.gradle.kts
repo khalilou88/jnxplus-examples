@@ -1,3 +1,7 @@
+plugins {
+  id("io.micronaut.platform.catalog") version "4.2.1"
+}
+
 rootProject.name = "root-project"
 include(":spring-boot:g-sb-app")
 include(":spring-boot:g-sb-lib")
