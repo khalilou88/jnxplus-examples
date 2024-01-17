@@ -1,5 +1,5 @@
-val javaVersion: String by project
-val quarkusVersion: String by project
+
+
 
 plugins {
     java
@@ -21,8 +21,8 @@ group "com.example"
 version "0.0.1-SNAPSHOT"
 
 java {
-    sourceCompatibility = libs.versions.java.get()
-    targetCompatibility = libs.versions.java.get()
+    sourceCompatibility = JavaVersion.toVersion(libs.versions.java.get())
+    targetCompatibility = JavaVersion.toVersion(libs.versions.java.get())
 }
 
 tasks.withType<Test> {

@@ -1,4 +1,4 @@
-val javaVersion: String by project
+
 
 plugins {
 	java
@@ -11,7 +11,7 @@ group = "com.example"
 version = "0.0.1-SNAPSHOT"
 
 java {
-  sourceCompatibility = libs.versions.java.get()
+  sourceCompatibility = JavaVersion.toVersion(libs.versions.java.get())
 }
 
 repositories {

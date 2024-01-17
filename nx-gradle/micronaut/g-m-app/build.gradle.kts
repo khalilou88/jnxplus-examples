@@ -1,4 +1,4 @@
-val javaVersion: String by project
+
 
 plugins {
     alias(libs.plugins.com.github.johnrengelman.shadow)
@@ -27,8 +27,8 @@ application {
 }
 
 java {
-    sourceCompatibility = libs.versions.java.get()
-    targetCompatibility = libs.versions.java.get()
+    sourceCompatibility = JavaVersion.toVersion(libs.versions.java.get())
+    targetCompatibility = JavaVersion.toVersion(libs.versions.java.get())
 }
 
 graalvmNative.toolchainDetection.set(false)

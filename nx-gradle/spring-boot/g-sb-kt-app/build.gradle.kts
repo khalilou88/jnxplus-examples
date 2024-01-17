@@ -1,6 +1,6 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-val javaVersion: String by project
+
 
 plugins {
   alias(libs.plugins.org.springframework.boot)
@@ -14,7 +14,7 @@ group = "com.example"
 version = "0.0.1-SNAPSHOT"
 
 java {
-  sourceCompatibility = libs.versions.java.get()
+  sourceCompatibility = JavaVersion.toVersion(libs.versions.java.get())
 }
 
 repositories {

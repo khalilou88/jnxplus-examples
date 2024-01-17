@@ -8,6 +8,6 @@ plugins {
   alias(libs.plugins.io.micronaut.application) apply false
   alias(libs.plugins.io.micronaut.aot) apply false
   alias(libs.plugins.com.google.devtools.ksp) apply false
-  alias(libs.plugins.com.github.ben-manes.versions) version "0.50.0"
-  alias(libs.plugins.nl.littlerobots.version-catalog-update) version "0.8.3"
+  alias(libs.plugins.com.github.ben.manes.versions)
+  alias(libs.plugins.nl.littlerobots.version.catalog.update)
 }

@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
-val javaVersion: String by project
-val kotlinVersion: String by project
+
+
 
 plugins {
     alias(libs.plugins.org.jetbrains.kotlin.jvm)
@@ -38,7 +38,7 @@ application {
 }
 
 java {
-    sourceCompatibility = libs.versions.java.get()
+    sourceCompatibility = JavaVersion.toVersion(libs.versions.java.get())
 }
 
 graalvmNative.toolchainDetection.set(false)
