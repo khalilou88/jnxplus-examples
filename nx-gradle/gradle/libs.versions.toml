@@ -1,7 +1,7 @@
 [versions]
 java = "17"
 checkstyle = "10.3.3"
-kotlin = "1.9.20"
+kotlin = "1.9.21"
 boot = "3.2.0"
 quarkus = "3.5.3"
 micronaut = "4.2.0"
@@ -20,7 +20,7 @@ quarkus = { id = "io.quarkus", version.ref = "quarkus" }
 micronaut-application = { id = "io.micronaut.application", version.ref = "micronaut" }
 micronaut-aot = { id = "io.micronaut.aot", version.ref = "micronaut" }
 micronaut-library = { id = "io.micronaut.library", version.ref = "micronaut" }
-google-devtools-ksp = { id = "com.google.devtools.ksp", version = "1.9.20-1.0.14" }
+google-devtools-ksp = { id = "com.google.devtools.ksp", version = "1.9.21-1.0.16" }
 github-johnrengelman-shadow = { id = "com.github.johnrengelman.shadow", version = "8.1.1" }
 github-khalilou88-jnxplus = { id = "io.github.khalilou88.jnxplus", version = "0.2.2" }
 
