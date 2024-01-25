@@ -40,4 +40,4 @@ jobs:
         run: npm i
 
       - name: Graph
-        run: npm run nx graph --file=graph.json
+        run: npm run nx graph -- --file=graph.json
