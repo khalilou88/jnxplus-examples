@@ -143,5 +143,6 @@
     <module>quarkus/m-q-lib</module>
     <module>quarkus/m-q-kt-app</module>
     <module>quarkus/m-q-kt-lib</module>
+    <module>none/m-n-lib</module>
   </modules>
 </project>
