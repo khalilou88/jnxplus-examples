@@ -7,6 +7,7 @@ function showProjectJson(projectName: string) {
       cwd: workspaceRoot,
       encoding: "utf8",
       stdio: "pipe",
+      env: process.env,
       windowsHide: true,
     })
       .toString()
