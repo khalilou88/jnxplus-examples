@@ -1,0 +1,20 @@
+{
+  "name": "nx-gradle-tests",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "regression-tests/nx-gradle-tests/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "regression-tests/nx-gradle-tests/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
