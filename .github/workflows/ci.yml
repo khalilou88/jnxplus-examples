@@ -62,3 +62,6 @@ jobs:
 
       - name: Build
         run: npm run nx run-many -- --target=build
+
+      - name: Regression tests
+        run: npm run nx run-many -- --target=regression-test
