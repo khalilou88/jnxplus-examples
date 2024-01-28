@@ -48,9 +48,6 @@ jobs:
       - name: Install dependencies
         run: npm i
 
-      - name: Install dependencies
-        run: npm i
-
       - name: Maven-checkstyle-lint
         run: npm run nx run-many -- --target=maven-checkstyle-lint
 
