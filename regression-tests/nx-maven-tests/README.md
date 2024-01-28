@@ -2,6 +2,6 @@
 
 This library was generated with [Nx](https://nx.dev).
 
-## Running unit tests
+## Running regression tests
 
-Run `nx test nx-maven-tests` to execute the unit tests via [Jest](https://jestjs.io).
+Run `nx regression-test nx-maven-tests` to execute the regression tests via [Jest](https://jestjs.io).
