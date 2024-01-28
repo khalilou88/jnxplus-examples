@@ -2,17 +2,18 @@ import { normalizePath, workspaceRoot } from "@nx/devkit";
 import { execSync } from "child_process";
 
 function showProjectJson(projectName: string) {
-  const a = execSync(`nx show project ${projectName} --json`, {
+  const result = execSync(`nx show project ${projectName} --json`, {
     cwd: workspaceRoot,
     env: process.env,
     encoding: "utf8",
     stdio: "pipe",
+    windowsHide: true,
   })
     .toString()
     .trim();
 
-  console.log(a);
-  return JSON.parse(a);
+  //console.log(result);
+  return JSON.parse(result);
 }
 
 describe("nx-maven tests", () => {
