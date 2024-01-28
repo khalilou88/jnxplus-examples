@@ -7,11 +7,13 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.example</groupId>
   <artifactId>root-parent-project</artifactId>
-  <version>${revision}</version>
+  <version>${revision}${sha1}${changelist}</version>
   <packaging>pom</packaging>
 
   <properties>
-    <revision>0.0.0</revision>
+    <revision>1.3.1</revision>
+    <changelist>-SNAPSHOT</changelist>
+    <sha1 />
     <java.version>17</java.version>
     <kotlin.version>1.9.20</kotlin.version>
     <spring.boot.version>3.2.0</spring.boot.version>

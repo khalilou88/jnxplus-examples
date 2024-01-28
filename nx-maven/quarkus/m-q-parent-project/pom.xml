@@ -13,7 +13,7 @@
   <parent>
     <groupId>com.example</groupId>
     <artifactId>root-parent-project</artifactId>
-    <version>${revision}</version>
+    <version>${revision}${sha1}${changelist}</version>
     <relativePath>../../pom.xml</relativePath>
   </parent>
 
