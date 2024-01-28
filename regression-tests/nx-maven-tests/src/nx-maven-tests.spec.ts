@@ -101,4 +101,17 @@ describe("nx-maven tests", () => {
       ),
     ).toBe(`nx-maven/.m2/repository/com/example/${libName}/0.0.0-SNAPSHOT`);
   });
+
+  it("should show m-n-lib config", () => {
+    const libName = "m-n-lib";
+    const projectJson = showProjectJson(libName);
+    expect(Object.entries(projectJson.targets).length).toBe(2);
+    expect(projectJson.targets.build.outputs).toEqual([
+      "{projectRoot}/target",
+      "{options.outputDirLocalRepo}",
+    ]);
+    expect(
+      normalizePath(projectJson.targets.build.options.outputDirLocalRepo),
+    ).toBe(`nx-maven/.m2/repository/fr/example/${libName}/1.2.3`);
+  });
 });
