@@ -3,7 +3,7 @@ import { execSync } from "child_process";
 
 function showProjectJson(projectName: string) {
   return JSON.parse(
-    execSync(`nx show project ${projectName} --json`, {
+    execSync(`nx show project ${projectName} -- --json`, {
       cwd: workspaceRoot,
       encoding: "utf8",
       stdio: "pipe",
