@@ -48,5 +48,23 @@ jobs:
       - name: Install dependencies
         run: npm i
 
+      - name: Install dependencies
+        run: npm i
+
+      - name: Maven-checkstyle-lint
+        run: npm run nx run-many -- --target=maven-checkstyle-lint
+
+      - name: Gradle-checkstyle-lint
+        run: npm run nx run-many -- --target=gradle-checkstyle-lint
+
+      - name: Ktlint
+        run: npm run nx run-many -- --target=ktlint
+
+      - name: Unit tests
+        run: npm run nx run-many -- --target=test
+
+      - name: Build
+        run: npm run nx run-many -- --target=build
+
       - name: Regression tests
         run: npm run nx run-many -- --target=regression-test

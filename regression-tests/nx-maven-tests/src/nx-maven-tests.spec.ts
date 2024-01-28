@@ -12,7 +12,7 @@ function showProjectJson(projectName: string) {
     .toString()
     .trim();
 
-  console.log(result);
+  //console.log(result);
   return JSON.parse(result);
 }
 
