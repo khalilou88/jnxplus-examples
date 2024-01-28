@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>fr.example</groupId>
   <artifactId>m-n-lib</artifactId>
-  <version>${my-version}</version>
+  <version>${my.version}</version>
   <name>m-n-lib</name>
   <description>This project was generated with nx-maven</description>
 
@@ -19,7 +19,7 @@
   </parent>
 
   <properties>
-    <my-version>1.2.3</my-version>
+    <my.version>1.2.3</my.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
   </properties>
