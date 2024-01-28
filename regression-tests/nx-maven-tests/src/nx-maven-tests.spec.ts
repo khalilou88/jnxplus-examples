@@ -5,6 +5,7 @@ function showProjectJson(projectName: string) {
   return JSON.parse(
     execSync(`nx show project ${projectName} --json`, {
       cwd: workspaceRoot,
+      stdio: "pipe",
       windowsHide: true,
     })
       .toString()
