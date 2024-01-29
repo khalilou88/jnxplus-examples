@@ -168,4 +168,58 @@ describe("nx-maven tests", () => {
       normalizePath(projectJson.targets.build.options.outputDirLocalRepo),
     ).toBe(`nx-maven/.m2/repository/com/example/${libName}/0.0.0-Final`);
   });
+
+  it("should show m-q-parent-project config", () => {
+    const projectName = "m-q-parent-project";
+    const projectJson = showProjectJson(projectName);
+    expect(Object.entries(projectJson.targets).length).toBe(1);
+    expect(projectJson.targets.build.outputs).toContain(
+      "{options.outputDirLocalRepo}",
+    );
+    expect(
+      normalizePath(projectJson.targets.build.options.outputDirLocalRepo),
+    ).toBe(`nx-maven/.m2/repository/com/example/${projectName}/0.0.0`);
+  });
+
+  it("should show m-q-app config", () => {
+    const appName = "m-q-app";
+    const projectJson = showProjectJson(appName);
+    expect(Object.entries(projectJson.targets).length).toBe(6);
+    expect(projectJson.targets.build.outputs).toContain("{projectRoot}/target");
+    expect(projectJson.targets.build.options.outputDirLocalRepo).toBeFalsy();
+  });
+
+  it("should show m-q-lib config", () => {
+    const libName = "m-q-lib";
+    const projectJson = showProjectJson(libName);
+    expect(Object.entries(projectJson.targets).length).toBe(3);
+    expect(projectJson.targets.build.outputs).toContain("{projectRoot}/target");
+    expect(projectJson.targets.build.outputs).toContain(
+      "{options.outputDirLocalRepo}",
+    );
+    expect(
+      normalizePath(projectJson.targets.build.options.outputDirLocalRepo),
+    ).toBe(`nx-maven/.m2/repository/com/example/${libName}/0.0.0`);
+  });
+
+  it("should show m-q-kt-app config", () => {
+    const appName = "m-q-kt-app";
+    const projectJson = showProjectJson(appName);
+    expect(Object.entries(projectJson.targets).length).toBe(7);
+    expect(projectJson.targets.build.outputs).toContain("{projectRoot}/target");
+    expect(projectJson.targets.build.options.outputDirLocalRepo).toBeFalsy();
+  });
+
+  it("should show m-q-kt-lib config", () => {
+    const libName = "m-q-kt-lib";
+    const projectJson = showProjectJson(libName);
+    expect(Object.entries(projectJson.targets).length).toBe(4);
+    expect(projectJson.targets.build.outputs).toContain("{projectRoot}/target");
+    expect(projectJson.targets.build.outputs).toContain(
+      "{options.outputDirLocalRepo}",
+    );
+    expect(
+      normalizePath(projectJson.targets.build.options.outputDirLocalRepo),
+    ).toBe(`nx-maven/.m2/repository/com/example/${libName}/0.0.0`);
+  });
 });
