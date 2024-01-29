@@ -33,6 +33,7 @@
     <micronaut.serialization.version>2.4.0</micronaut.serialization.version>
     <micronaut.test.resources.version>2.2.0</micronaut.test.resources.version>
     <micronaut.aot.version>2.1.1</micronaut.aot.version>
+    <maven-shade-plugin.version>3.5.1</maven-shade-plugin.version>
   </properties>
 
   <dependencyManagement>
@@ -102,6 +103,40 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
           <version>${maven-resources-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-shade-plugin</artifactId>
+          <version>${maven-shade-plugin.version}</version>
+          <executions>
+            <execution>
+              <id>default-shade</id>
+              <configuration>
+                <createDependencyReducedPom>false</createDependencyReducedPom>
+                <transformers>
+                  <transformer
+                    implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer"
+                  >
+                    <mainClass>${exec.mainClass}</mainClass>
+                  </transformer>
+                  <transformer
+                    implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"
+                  />
+                </transformers>
+                <filters>
+                  <filter>
+                    <artifact>*.*</artifact>
+                    <excludes>
+                      <exclude>META-INF/*.SF</exclude>
+                      <exclude>META-INF/*.DSA</exclude>
+                      <exclude>META-INF/*.RSA</exclude>
+                      <exclude>module-info.class</exclude>
+                    </excludes>
+                  </filter>
+                </filters>
+              </configuration>
+            </execution>
+          </executions>
         </plugin>
       </plugins>
     </pluginManagement>
