@@ -6,6 +6,7 @@
 >
   <modelVersion>4.0.0</modelVersion>
   <artifactId>m-m-kt-app</artifactId>
+  <version>${revision}${sha1}${changelist}</version>
   <packaging>${packaging}</packaging>
   <name>m-m-kt-app</name>
   <description>This project was generated with nx-maven</description>
@@ -18,6 +19,8 @@
   </parent>
 
   <properties>
+    <changelist>-Final</changelist>
+    <sha1 />
     <packaging>jar</packaging>
     <micronaut.runtime>netty</micronaut.runtime>
     <micronaut.aot.enabled>false</micronaut.aot.enabled>

@@ -6,6 +6,7 @@
 >
   <modelVersion>4.0.0</modelVersion>
   <artifactId>m-m-kt-lib</artifactId>
+  <version>${revision}${sha1}${changelist}</version>
   <name>m-m-kt-lib</name>
   <description>This project was generated with nx-maven</description>
 
@@ -15,6 +16,11 @@
     <version>${revision}</version>
     <relativePath>../m-m-parent-project/pom.xml</relativePath>
   </parent>
+
+  <properties>
+    <changelist>-Final</changelist>
+    <sha1 />
+  </properties>
 
   <repositories>
     <repository>
