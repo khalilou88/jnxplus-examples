@@ -1,0 +1,22 @@
+{
+  "name": "m-n-kt-lib",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "./nx-maven/none/m-n-kt-lib/src",
+  "targets": {
+    "build": {
+      "executor": "@jnxplus/nx-maven:run-task",
+      "outputs": ["{projectRoot}/target", "{options.outputDirLocalRepo}"],
+      "options": {
+        "task": "install -DskipTests=true"
+      }
+    },
+    "test": {
+      "executor": "@jnxplus/nx-maven:run-task",
+      "options": {
+        "task": "test"
+      }
+    }
+  },
+  "tags": []
+}
