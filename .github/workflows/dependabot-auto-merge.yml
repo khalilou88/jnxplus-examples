@@ -41,7 +41,7 @@ jobs:
 
       - name: Tests
         id: tests
-        run: npm run nx run-many -- --target=test
+        run: npm run nx run-many -- --target=test --parallel=1
         env:
           NX_VERBOSE_LOGGING: "true"
           GITHUB_ACTIONS: "true"
