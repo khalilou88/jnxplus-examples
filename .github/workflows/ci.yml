@@ -2,14 +2,14 @@ name: CI
 on:
   # Trigger manually or on schedule
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - "**.md"
-  pull_request:
-    branches:
-      - main
+  # push:
+  #   branches:
+  #     - main
+  #   paths-ignore:
+  #     - "**.md"
+  # pull_request:
+  #   branches:
+  #     - main
   schedule:
     - cron: "0 2 * * *"
 
