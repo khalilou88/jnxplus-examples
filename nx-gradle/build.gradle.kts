@@ -19,4 +19,10 @@ plugins {
   alias(libs.plugins.micronaut.aot) apply false
   alias(libs.plugins.google.devtools.ksp) apply false
   alias(libs.plugins.github.johnrengelman.shadow) apply false
+  // kmp
+  alias(libs.plugins.androidApplication) apply false
+  alias(libs.plugins.androidLibrary) apply false
+  alias(libs.plugins.jetbrainsCompose) apply false
+  alias(libs.plugins.kotlinJvm) apply false
+  alias(libs.plugins.kotlinMultiplatform) apply false
 }

@@ -1,0 +1,203 @@
+{
+  "pluginVersion": "0.3.0",
+  "projects": [
+    {
+      "relativePath": ".",
+      "name": "root-project",
+      "isProjectJsonExists": true,
+      "isBuildGradleExists": false,
+      "isBuildGradleKtsExists": true,
+      "isSettingsGradleExists": false,
+      "isSettingsGradleKtsExists": true,
+      "isGradlePropertiesExists": true,
+      "parentProjectName": "",
+      "dependencies": []
+    },
+    {
+      "relativePath": "quarkus\\g-q-kt-lib",
+      "name": "g-q-kt-lib",
+      "isProjectJsonExists": true,
+      "isBuildGradleExists": false,
+      "isBuildGradleKtsExists": true,
+      "isSettingsGradleExists": false,
+      "isSettingsGradleKtsExists": false,
+      "isGradlePropertiesExists": false,
+      "parentProjectName": "root-project",
+      "dependencies": []
+    },
+    {
+      "relativePath": "quarkus\\g-q-app",
+      "name": "g-q-app",
+      "isProjectJsonExists": true,
+      "isBuildGradleExists": false,
+      "isBuildGradleKtsExists": true,
+      "isSettingsGradleExists": false,
+      "isSettingsGradleKtsExists": false,
+      "isGradlePropertiesExists": false,
+      "parentProjectName": "root-project",
+      "dependencies": [
+        {
+          "relativePath": "quarkus\\g-q-lib",
+          "name": "g-q-lib",
+          "isProjectJsonExists": true,
+          "isBuildGradleExists": false
+        }
+      ]
+    },
+    {
+      "relativePath": "quarkus\\g-q-lib",
+      "name": "g-q-lib",
+      "isProjectJsonExists": true,
+      "isBuildGradleExists": false,
+      "isBuildGradleKtsExists": true,
+      "isSettingsGradleExists": false,
+      "isSettingsGradleKtsExists": false,
+      "isGradlePropertiesExists": false,
+      "parentProjectName": "root-project",
+      "dependencies": []
+    },
+    {
+      "relativePath": "quarkus\\g-q-kt-app",
+      "name": "g-q-kt-app",
+      "isProjectJsonExists": true,
+      "isBuildGradleExists": false,
+      "isBuildGradleKtsExists": true,
+      "isSettingsGradleExists": false,
+      "isSettingsGradleKtsExists": false,
+      "isGradlePropertiesExists": false,
+      "parentProjectName": "root-project",
+      "dependencies": [
+        {
+          "relativePath": "quarkus\\g-q-kt-lib",
+          "name": "g-q-kt-lib",
+          "isProjectJsonExists": true,
+          "isBuildGradleExists": false
+        }
+      ]
+    },
+    {
+      "relativePath": "micronaut\\g-m-kt-app",
+      "name": "g-m-kt-app",
+      "isProjectJsonExists": true,
+      "isBuildGradleExists": false,
+      "isBuildGradleKtsExists": true,
+      "isSettingsGradleExists": false,
+      "isSettingsGradleKtsExists": false,
+      "isGradlePropertiesExists": false,
+      "parentProjectName": "root-project",
+      "dependencies": [
+        {
+          "relativePath": "micronaut\\g-m-kt-lib",
+          "name": "g-m-kt-lib",
+          "isProjectJsonExists": true,
+          "isBuildGradleExists": false
+        }
+      ]
+    },
+    {
+      "relativePath": "micronaut\\g-m-app",
+      "name": "g-m-app",
+      "isProjectJsonExists": true,
+      "isBuildGradleExists": false,
+      "isBuildGradleKtsExists": true,
+      "isSettingsGradleExists": false,
+      "isSettingsGradleKtsExists": false,
+      "isGradlePropertiesExists": false,
+      "parentProjectName": "root-project",
+      "dependencies": [
+        {
+          "relativePath": "micronaut\\g-m-lib",
+          "name": "g-m-lib",
+          "isProjectJsonExists": true,
+          "isBuildGradleExists": false
+        }
+      ]
+    },
+    {
+      "relativePath": "micronaut\\g-m-kt-lib",
+      "name": "g-m-kt-lib",
+      "isProjectJsonExists": true,
+      "isBuildGradleExists": false,
+      "isBuildGradleKtsExists": true,
+      "isSettingsGradleExists": false,
+      "isSettingsGradleKtsExists": false,
+      "isGradlePropertiesExists": false,
+      "parentProjectName": "root-project",
+      "dependencies": []
+    },
+    {
+      "relativePath": "micronaut\\g-m-lib",
+      "name": "g-m-lib",
+      "isProjectJsonExists": true,
+      "isBuildGradleExists": false,
+      "isBuildGradleKtsExists": true,
+      "isSettingsGradleExists": false,
+      "isSettingsGradleKtsExists": false,
+      "isGradlePropertiesExists": false,
+      "parentProjectName": "root-project",
+      "dependencies": []
+    },
+    {
+      "relativePath": "spring-boot\\g-sb-app",
+      "name": "g-sb-app",
+      "isProjectJsonExists": true,
+      "isBuildGradleExists": false,
+      "isBuildGradleKtsExists": true,
+      "isSettingsGradleExists": false,
+      "isSettingsGradleKtsExists": false,
+      "isGradlePropertiesExists": false,
+      "parentProjectName": "root-project",
+      "dependencies": [
+        {
+          "relativePath": "spring-boot\\g-sb-lib",
+          "name": "g-sb-lib",
+          "isProjectJsonExists": true,
+          "isBuildGradleExists": false
+        }
+      ]
+    },
+    {
+      "relativePath": "spring-boot\\g-sb-kt-app",
+      "name": "g-sb-kt-app",
+      "isProjectJsonExists": true,
+      "isBuildGradleExists": false,
+      "isBuildGradleKtsExists": true,
+      "isSettingsGradleExists": false,
+      "isSettingsGradleKtsExists": false,
+      "isGradlePropertiesExists": false,
+      "parentProjectName": "root-project",
+      "dependencies": [
+        {
+          "relativePath": "spring-boot\\g-sb-kt-lib",
+          "name": "g-sb-kt-lib",
+          "isProjectJsonExists": true,
+          "isBuildGradleExists": false
+        }
+      ]
+    },
+    {
+      "relativePath": "spring-boot\\g-sb-lib",
+      "name": "g-sb-lib",
+      "isProjectJsonExists": true,
+      "isBuildGradleExists": false,
+      "isBuildGradleKtsExists": true,
+      "isSettingsGradleExists": false,
+      "isSettingsGradleKtsExists": false,
+      "isGradlePropertiesExists": false,
+      "parentProjectName": "root-project",
+      "dependencies": []
+    },
+    {
+      "relativePath": "spring-boot\\g-sb-kt-lib",
+      "name": "g-sb-kt-lib",
+      "isProjectJsonExists": true,
+      "isBuildGradleExists": false,
+      "isBuildGradleKtsExists": true,
+      "isSettingsGradleExists": false,
+      "isSettingsGradleKtsExists": false,
+      "isGradlePropertiesExists": false,
+      "parentProjectName": "root-project",
+      "dependencies": []
+    }
+  ]
+}
