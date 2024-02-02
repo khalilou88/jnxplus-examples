@@ -22,7 +22,7 @@ micronaut-aot = { id = "io.micronaut.aot", version.ref = "micronaut" }
 micronaut-library = { id = "io.micronaut.library", version.ref = "micronaut" }
 google-devtools-ksp = { id = "com.google.devtools.ksp", version = "1.9.21-1.0.16" }
 github-johnrengelman-shadow = { id = "com.github.johnrengelman.shadow", version = "8.1.1" }
-github-khalilou88-jnxplus = { id = "io.github.khalilou88.jnxplus", version = "0.2.2" }
+github-khalilou88-jnxplus = { id = "io.github.khalilou88.jnxplus", version = "0.3.0" }
 
 
 
