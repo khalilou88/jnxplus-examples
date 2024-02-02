@@ -55,7 +55,7 @@ kotlin {
             implementation(compose.ui)
             @OptIn(ExperimentalComposeLibrary::class)
             implementation(compose.components.resources)
-            implementation(projects.shared)
+            implementation(projects.kmp.shared)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
