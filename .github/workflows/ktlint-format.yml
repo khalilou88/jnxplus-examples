@@ -1,5 +1,7 @@
 name: Ktlint-format
 on:
+  # Trigger manually or on schedule
+  workflow_dispatch:
   schedule:
     - cron: "0 3 * * *"
 
