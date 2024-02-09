@@ -37,6 +37,12 @@
       "options": {
         "task": "checkstyle:check"
       }
+    },
+    "maven-pmd-check": {
+      "executor": "@jnxplus/nx-maven:run-task",
+      "options": {
+        "task": "pmd:check"
+      }
     }
   },
   "tags": []

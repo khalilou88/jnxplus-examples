@@ -55,13 +55,32 @@
         <dependencies>
           <dependency>
             <groupId>com.example</groupId>
-            <artifactId>build-tools</artifactId>
+            <artifactId>build-tools-checkstyle</artifactId>
             <version>1.0</version>
           </dependency>
         </dependencies>
         <configuration>
           <configLocation>checkstyle.xml</configLocation>
         </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-pmd-plugin</artifactId>
+        <version>3.21.2</version>
+        <configuration>
+          <rulesets>
+            <ruleset>pmd-ruleset.xml</ruleset>
+          </rulesets>
+          <printFailingErrors>true</printFailingErrors>
+        </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>build-tools-pmd</artifactId>
+            <version>1.0</version>
+          </dependency>
+        </dependencies>
       </plugin>
 
       <plugin>
@@ -127,7 +146,8 @@
   </build>
 
   <modules>
-    <module>build-tools</module>
+    <module>build-tools/build-tools-checkstyle</module>
+    <module>build-tools/build-tools-pmd</module>
     <module>spring-boot/m-sb-parent-project</module>
     <module>spring-boot/m-sb-app</module>
     <module>spring-boot/m-sb-lib</module>

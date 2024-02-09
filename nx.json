@@ -13,7 +13,16 @@
       "cache": true,
       "dependsOn": [
         {
-          "projects": ["build-tools"],
+          "projects": ["build-tools-checkstyle"],
+          "target": "build"
+        }
+      ]
+    },
+    "maven-pmd-check": {
+      "cache": true,
+      "dependsOn": [
+        {
+          "projects": ["build-tools-pmd"],
           "target": "build"
         }
       ]

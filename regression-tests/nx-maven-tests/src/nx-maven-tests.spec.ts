@@ -103,7 +103,7 @@ describe("nx-maven tests", () => {
   it("should show m-sb-lib config", () => {
     const libName = "m-sb-lib";
     const projectJson = showProjectJson(libName);
-    expect(Object.entries(projectJson.targets).length).toBe(4);
+    expect(Object.entries(projectJson.targets).length).toBe(5);
     expect(projectJson.targets.build.outputs).toContain("{projectRoot}/target");
     expect(projectJson.targets.build.outputs).toContain(
       "{options.outputDirLocalRepo}",
