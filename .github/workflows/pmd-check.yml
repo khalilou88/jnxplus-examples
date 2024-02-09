@@ -1,4 +1,4 @@
-name: Ktlint-format
+name: Pmd-check
 on:
   # Trigger manually or on schedule
   workflow_dispatch:
