@@ -163,8 +163,8 @@
     <module>quarkus/m-q-lib</module>
     <module>quarkus/m-q-kt-app</module>
     <module>quarkus/m-q-kt-lib</module>
-    <module>none/m-n-lib</module>
     <module>none/m-n-parent-project</module>
+    <module>none/m-n-lib</module>
     <module>none/m-n-kt-lib</module>
   </modules>
 </project>
