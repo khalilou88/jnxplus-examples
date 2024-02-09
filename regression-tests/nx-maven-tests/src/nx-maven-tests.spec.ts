@@ -17,8 +17,21 @@ function showProjectJson(projectName: string) {
 }
 
 describe("nx-maven tests", () => {
-  it("should show build-tools config", () => {
-    const libName = "build-tools";
+  it("should show build-tools-checkstyle config", () => {
+    const libName = "build-tools-checkstyle";
+    const projectJson = showProjectJson(libName);
+    expect(Object.entries(projectJson.targets).length).toBe(1);
+    expect(projectJson.targets.build.outputs).toEqual([
+      "{projectRoot}/target",
+      "{options.outputDirLocalRepo}",
+    ]);
+    expect(
+      normalizePath(projectJson.targets.build.options.outputDirLocalRepo),
+    ).toBe(`nx-maven/.m2/repository/com/example/${libName}/1.0`);
+  });
+
+  it("should show build-tools-pmd config", () => {
+    const libName = "build-tools-pmd";
     const projectJson = showProjectJson(libName);
     expect(Object.entries(projectJson.targets).length).toBe(1);
     expect(projectJson.targets.build.outputs).toEqual([
