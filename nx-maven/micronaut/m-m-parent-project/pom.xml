@@ -141,4 +141,11 @@
       </plugins>
     </pluginManagement>
   </build>
+
+  <modules>
+    <module>../m-m-app</module>
+    <module>../m-m-lib</module>
+    <module>../m-m-kt-app</module>
+    <module>../m-m-kt-lib</module>
+  </modules>
 </project>

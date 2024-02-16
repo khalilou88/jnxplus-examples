@@ -57,4 +57,11 @@
       </plugin>
     </plugins>
   </build>
+
+  <modules>
+    <module>../m-q-app</module>
+    <module>../m-q-lib</module>
+    <module>../m-q-kt-app</module>
+    <module>../m-q-kt-lib</module>
+  </modules>
 </project>

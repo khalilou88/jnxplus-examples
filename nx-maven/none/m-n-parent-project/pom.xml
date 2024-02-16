@@ -22,4 +22,9 @@
   <properties>
     <my.version>3.2.1</my.version>
   </properties>
+
+  <modules>
+    <module>../m-n-lib</module>
+    <module>../m-n-kt-lib</module>
+  </modules>
 </project>
