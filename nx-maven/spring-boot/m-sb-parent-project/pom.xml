@@ -129,4 +129,11 @@
       </plugin>
     </plugins>
   </build>
+
+  <modules>
+    <module>../m-sb-app</module>
+    <module>../m-sb-lib</module>
+    <module>../m-sb-kt-app</module>
+    <module>../m-sb-kt-lib</module>
+  </modules>
 </project>

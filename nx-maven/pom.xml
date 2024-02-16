@@ -149,10 +149,6 @@
     <module>build-tools/build-tools-checkstyle</module>
     <module>build-tools/build-tools-pmd</module>
     <module>spring-boot/m-sb-parent-project</module>
-    <module>spring-boot/m-sb-app</module>
-    <module>spring-boot/m-sb-lib</module>
-    <module>spring-boot/m-sb-kt-app</module>
-    <module>spring-boot/m-sb-kt-lib</module>
     <module>micronaut/m-m-parent-project</module>
     <module>micronaut/m-m-app</module>
     <module>micronaut/m-m-lib</module>
