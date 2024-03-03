@@ -20,8 +20,7 @@
     "serve": {
       "executor": "@jnxplus/nx-maven:run-task",
       "options": {
-        "task": "mn:run",
-        "keepItRunning": true
+        "task": "mn:run"
       },
       "dependsOn": ["^build"]
     },

@@ -17,8 +17,7 @@
     "serve": {
       "executor": "@jnxplus/nx-maven:run-task",
       "options": {
-        "task": "quarkus:dev",
-        "keepItRunning": true
+        "task": "quarkus:dev"
       },
       "dependsOn": ["^build"]
     },

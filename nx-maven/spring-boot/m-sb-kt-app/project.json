@@ -20,8 +20,7 @@
     "serve": {
       "executor": "@jnxplus/nx-maven:run-task",
       "options": {
-        "task": "spring-boot:run",
-        "keepItRunning": true
+        "task": "spring-boot:run"
       },
       "dependsOn": ["^build"]
     },

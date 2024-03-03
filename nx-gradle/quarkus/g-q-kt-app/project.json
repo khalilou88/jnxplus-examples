@@ -17,8 +17,7 @@
     "serve": {
       "executor": "@jnxplus/nx-gradle:run-task",
       "options": {
-        "task": "quarkusDev",
-        "keepItRunning": true
+        "task": "quarkusDev"
       }
     },
     "test": {
