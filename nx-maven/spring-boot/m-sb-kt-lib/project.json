@@ -12,7 +12,7 @@
         "{projectRoot}/.flattened-pom.xml"
       ],
       "options": {
-        "task": "install -DskipTests=true"
+        "task": "clean install -DskipTests=true"
       }
     },
     "test": {

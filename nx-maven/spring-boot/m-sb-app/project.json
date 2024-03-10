@@ -8,7 +8,7 @@
       "executor": "@jnxplus/nx-maven:run-task",
       "outputs": ["{projectRoot}/target", "{projectRoot}/.flattened-pom.xml"],
       "options": {
-        "task": "package spring-boot:repackage -DskipTests=true"
+        "task": "clean package spring-boot:repackage -DskipTests=true"
       }
     },
     "build-image": {
@@ -17,7 +17,7 @@
         "task": "spring-boot:build-image"
       }
     },
-    "serve": {
+    "maven-serve": {
       "executor": "@jnxplus/nx-maven:run-task",
       "options": {
         "task": "spring-boot:run"
