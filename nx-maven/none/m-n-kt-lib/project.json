@@ -15,7 +15,8 @@
       "executor": "@jnxplus/nx-maven:run-task",
       "options": {
         "task": "test"
-      }
+      },
+      "dependsOn": ["^build"]
     }
   },
   "tags": []

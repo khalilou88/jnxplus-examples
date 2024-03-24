@@ -19,7 +19,8 @@
       "executor": "@jnxplus/nx-maven:run-task",
       "options": {
         "task": "test"
-      }
+      },
+      "dependsOn": ["^build"]
     },
     "maven-checkstyle-lint": {
       "executor": "@jnxplus/nx-maven:run-task",
