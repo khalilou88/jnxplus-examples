@@ -1,5 +1,16 @@
 {
   "name": "root-project",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
-  "targets": {}
+  "targets": {
+    "build": {
+      "executor": "nx:noop",
+      "inputs": [
+        "{workspaceRoot}/nx-gradle/gradle/**/*",
+        "{workspaceRoot}/nx-gradle/project.json",
+        "{workspaceRoot}/nx-gradle/settings.gradle.kts",
+        "{workspaceRoot}/nx-gradle/build.gradle.kts",
+        "{workspaceRoot}/nx-gradle/gradle.properties"
+      ]
+    }
+  }
 }
