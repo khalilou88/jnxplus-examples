@@ -5,11 +5,10 @@
     "build": {
       "executor": "nx:noop",
       "inputs": [
-        "{workspaceRoot}/nx-gradle/gradle/**/*",
-        "{workspaceRoot}/nx-gradle/project.json",
-        "{workspaceRoot}/nx-gradle/settings.gradle.kts",
-        "{workspaceRoot}/nx-gradle/build.gradle.kts",
-        "{workspaceRoot}/nx-gradle/gradle.properties"
+        "{projectRoot}/gradle/**/*",
+        "{projectRoot}/settings.gradle.kts",
+        "{projectRoot}/build.gradle.kts",
+        "{projectRoot}/gradle.properties"
       ]
     }
   }
