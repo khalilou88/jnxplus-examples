@@ -5,3 +5,5 @@ nx-maven/.m2/repository
 # Gradle build
 build/
 
+
+/.nx/workspace-data
