@@ -16,7 +16,7 @@ jobs:
     env:
       NX_VERBOSE_LOGGING: "true"
       NX_MAVEN_CLI_OPTS: "--no-transfer-progress -Dmaven.plugin.validation=VERBOSE"
-      NX_SKIP_MAVEN_WRAPPER: "true"
+      NX_MAVEN_CLI: "mvn"
     runs-on: ${{ matrix.os }}
     steps:
       - name: Check out repository code
