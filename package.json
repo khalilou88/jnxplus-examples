@@ -11,7 +11,7 @@
   },
   "private": true,
   "devDependencies": {
-    "@jnxplus/nx-gradle": "1.4.0",
+    "@jnxplus/nx-gradle": "1.5.0",
     "@jnxplus/nx-maven": "1.5.0",
     "@nx/eslint": "19.3.2",
     "@nx/eslint-plugin": "19.3.2",
