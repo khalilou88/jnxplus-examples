@@ -20,7 +20,7 @@
     "@nx/node": "19.4.3",
     "@nx/workspace": "19.4.3",
     "@prettier/plugin-xml": "^3.4.1",
-    "@swc-node/register": "1.10.3",
+    "@swc-node/register": "1.10.7",
     "@swc/core": "1.6.13",
     "@types/jest": "^29.5.12",
     "@types/node": "20.14.10",
