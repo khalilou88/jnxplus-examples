@@ -66,7 +66,11 @@
       "plugin": "@jnxplus/nx-maven",
       "options": {
         "mavenRootDirectory": "nx-maven",
-        "localRepoRelativePath": ".m2/repository"
+        "localRepoRelativePath": ".m2/repository",
+        "graphOptions": {
+          "skipProjectWithoutProjectJson": true,
+          "skipAggregatorProjectLinking": true
+        }
       }
     },
     {
