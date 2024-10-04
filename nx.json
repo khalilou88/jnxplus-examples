@@ -24,6 +24,17 @@
         }
       ]
     },
+    "target-with-outputDirLocalRepo": {
+      "executor": "@jnxplus/nx-maven:run-task",
+      "outputs": [
+        "{projectRoot}/target",
+        "{options.outputDirLocalRepo}",
+        "{projectRoot}/.flattened-pom.xml"
+      ],
+      "options": {
+        "task": "install -DskipTests=true"
+      }
+    },
     "@nx/jest:jest": {
       "cache": true,
       "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"],

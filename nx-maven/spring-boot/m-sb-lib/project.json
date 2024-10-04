@@ -16,15 +16,7 @@
       }
     },
     "target-with-outputDirLocalRepo": {
-      "executor": "@jnxplus/nx-maven:run-task",
-      "outputs": [
-        "{projectRoot}/target",
-        "{options.outputDirLocalRepo}",
-        "{projectRoot}/.flattened-pom.xml"
-      ],
-      "options": {
-        "task": "install -DskipTests=true"
-      }
+      "executor": "@jnxplus/nx-maven:run-task"
     },
     "test": {
       "executor": "@jnxplus/nx-maven:run-task",
