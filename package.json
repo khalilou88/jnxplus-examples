@@ -21,7 +21,7 @@
     "@nx/workspace": "20.0.8",
     "@prettier/plugin-xml": "^3.4.1",
     "@swc-node/register": "1.10.9",
-    "@swc/core": "1.7.40",
+    "@swc/core": "1.7.42",
     "@types/jest": "29.5.14",
     "@types/node": "22.8.6",
     "@typescript-eslint/eslint-plugin": "7.18.0",
