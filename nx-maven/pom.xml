@@ -21,6 +21,28 @@
   </properties>
 
   <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-pmd-plugin</artifactId>
+          <version>3.21.2</version>
+          <configuration>
+            <rulesets>
+              <ruleset>pmd-ruleset.xml</ruleset>
+            </rulesets>
+            <printFailingErrors>true</printFailingErrors>
+          </configuration>
+          <dependencies>
+            <dependency>
+              <groupId>com.example</groupId>
+              <artifactId>build-tools-pmd</artifactId>
+              <version>1.0</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+      </plugins>
+    </pluginManagement>
     <plugins>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
@@ -67,20 +89,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-pmd-plugin</artifactId>
-        <version>3.21.2</version>
-        <configuration>
-          <rulesets>
-            <ruleset>pmd-ruleset.xml</ruleset>
-          </rulesets>
-          <printFailingErrors>true</printFailingErrors>
-        </configuration>
-        <dependencies>
-          <dependency>
-            <groupId>com.example</groupId>
-            <artifactId>build-tools-pmd</artifactId>
-            <version>1.0</version>
-          </dependency>
-        </dependencies>
       </plugin>
 
       <plugin>
