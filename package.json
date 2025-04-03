@@ -35,7 +35,7 @@
     "nx": "20.7.0",
     "prettier": "^3.4.2",
     "prettier-plugin-java": "^2.6.6",
-    "ts-jest": "^29.2.5",
+    "ts-jest": "^29.3.1",
     "ts-node": "10.9.2",
     "typescript": "5.7.3"
   },
