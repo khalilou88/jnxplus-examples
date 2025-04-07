@@ -34,7 +34,7 @@
     "lint-staged": "^15.5.0",
     "nx": "20.7.1",
     "prettier": "^3.4.2",
-    "prettier-plugin-java": "^2.6.6",
+    "prettier-plugin-java": "^2.6.7",
     "ts-jest": "^29.3.1",
     "ts-node": "10.9.2",
     "typescript": "5.7.3"
