@@ -56,3 +56,5 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 !gradle/wrapper/gradle-wrapper.jar
+.cursor/rules/nx-rules.mdc
+.github/instructions/nx.instructions.md
