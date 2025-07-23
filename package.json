@@ -27,7 +27,7 @@
     "@typescript-eslint/eslint-plugin": "7.18.0",
     "@typescript-eslint/parser": "7.18.0",
     "eslint": "8.57.1",
-    "eslint-config-prettier": "10.1.5",
+    "eslint-config-prettier": "10.1.8",
     "husky": "^9.1.7",
     "jest": "30.0.4",
     "jest-environment-node": "^30.0.4",
