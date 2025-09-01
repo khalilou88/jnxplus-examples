@@ -30,7 +30,7 @@
     "eslint-config-prettier": "10.1.8",
     "husky": "^9.1.7",
     "jest": "30.1.1",
-    "jest-environment-node": "^30.0.4",
+    "jest-environment-node": "^30.1.2",
     "lint-staged": "^16.1.5",
     "nx": "21.2.4",
     "prettier": "^3.6.2",
